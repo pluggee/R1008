@@ -1,4 +1,4 @@
-update=Mon 12 Dec 2016 05:59:43 PM PST
+update=Tue 13 Dec 2016 10:16:38 AM PST
 version=1
 last_client=kicad
 [pcbnew]
@@ -34,3 +34,5 @@ LibName2=device
 LibName3=analog
 LibName4=connect
 LibName5=systems
+LibName6=microcontroller
+LibName7=devices
