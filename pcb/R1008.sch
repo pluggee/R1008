@@ -6,7 +6,6 @@ LIBS:connect
 LIBS:systems
 LIBS:microcontroller
 LIBS:devices
-LIBS:R1008-cache
 EELAYER 25 0
 EELAYER END
 $Descr B 17000 11000
@@ -88,7 +87,7 @@ ID3
 Text GLabel 4450 1850 2    39   BiDi ~ 0
 RESERVED0
 Text GLabel 4450 1750 2    39   BiDi ~ 0
-SCLK
+SCLK_B
 $Comp
 L PCIEXPRESS-X1 J1
 U 1 1 575CF2BC
@@ -1369,20 +1368,20 @@ Wire Wire Line
 	6950 6950 6950 7400
 Wire Wire Line
 	6950 7400 8425 7400
-Text GLabel 5350 7600 2    39   BiDi ~ 0
-ID3
-Text GLabel 5350 7500 2    39   BiDi ~ 0
-ID2
-Text GLabel 5350 7400 2    39   BiDi ~ 0
-ID1
 Text GLabel 5350 7300 2    39   BiDi ~ 0
+ID3
+Text GLabel 5350 7400 2    39   BiDi ~ 0
+ID2
+Text GLabel 5350 7500 2    39   BiDi ~ 0
+ID1
+Text GLabel 5350 7600 2    39   BiDi ~ 0
 ID0
 Wire Wire Line
-	5350 7300 4800 7300
+	5350 7600 4800 7600
+Wire Wire Line
+	4800 7500 5350 7500
 Wire Wire Line
 	4800 7400 5350 7400
 Wire Wire Line
-	5350 7500 4800 7500
-Wire Wire Line
-	4800 7600 5350 7600
+	5350 7300 4800 7300
 $EndSCHEMATC
