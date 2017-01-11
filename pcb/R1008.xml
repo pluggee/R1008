@@ -1,0 +1,908 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/sherif/git/R1008/pcb/R1008.sch</source>
+    <date>Wed 11 Jan 2017 12:23:59 AM PST</date>
+    <tool>Eeschema 4.0.3+e1-6302~38~ubuntu14.04.1-stable</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>R1008.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="J1">
+      <value>PCIEXPRESS-X1</value>
+      <footprint>Main:PCIEXPRESS-X1</footprint>
+      <fields>
+        <field name="Manufacturer">Amphenol FCI</field>
+        <field name="MPN">10018784-10200TLF</field>
+      </fields>
+      <libsource lib="connect" part="PCIEXPRESS-X1"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>575CF2BC</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>MAX31865AAP+</value>
+      <footprint>Main:SOP65P720X530X186-20</footprint>
+      <fields>
+        <field name="Manufacturer">Maxim Integrated</field>
+        <field name="MPN">MAX31865AAP+</field>
+        <field name="SKU">STUFF</field>
+      </fields>
+      <libsource lib="analog" part="MAX31865AAP+"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>584F9D7D</tstamp>
+    </comp>
+    <comp ref="U2">
+      <value>MAX31865AAP+</value>
+      <footprint>Main:SOP65P720X530X186-20</footprint>
+      <fields>
+        <field name="Manufacturer">Maxim Integrated</field>
+        <field name="MPN">MAX31865AAP+</field>
+        <field name="SKU">STUFF</field>
+      </fields>
+      <libsource lib="analog" part="MAX31865AAP+"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>584F9DD0</tstamp>
+    </comp>
+    <comp ref="U4">
+      <value>EFM8BB10F2G</value>
+      <footprint>Main:QFN50P300X300X75-20NT170X170</footprint>
+      <fields>
+        <field name="Manufacturer">Silicon Labs</field>
+        <field name="MPN">EFM8BB10F2G-A-QFN20R</field>
+        <field name="SKU">STUFF</field>
+      </fields>
+      <libsource lib="microcontroller" part="EFM8BB10F2G"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>584FA35B</tstamp>
+    </comp>
+    <comp ref="J3">
+      <value>SOCKET254P-01X04-1725672</value>
+      <footprint>Main:SOCKET254P-01X04-1725672</footprint>
+      <fields>
+        <field name="Manufacturer">Phoenix Contact</field>
+        <field name="MPN">1725672</field>
+        <field name="SKU">STUFF</field>
+      </fields>
+      <libsource lib="connect" part="SOCKET254P-01X04-1725672"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>584FB101</tstamp>
+    </comp>
+    <comp ref="J4">
+      <value>CONN_01X03</value>
+      <footprint>Main:SOCKET254P-01X03</footprint>
+      <fields>
+        <field name="Manufacturer">TE Connectivity AMP Connectors</field>
+        <field name="MPN">3-644456-3</field>
+        <field name="SKU">STUFF</field>
+      </fields>
+      <libsource lib="connect" part="CONN_01X03"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>584FB7FA</tstamp>
+    </comp>
+    <comp ref="J5">
+      <value>CONN_01X04</value>
+      <footprint>Main:SOCKET254P-01X04</footprint>
+      <fields>
+        <field name="Manufacturer">TE Connectivity AMP Connectors</field>
+        <field name="MPN">3-644456-4</field>
+        <field name="SKU">STUFF</field>
+      </fields>
+      <libsource lib="connect" part="CONN_01X04"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>584FED99</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>SOCKET254P-01X04-1725672</value>
+      <footprint>Main:SOCKET254P-01X04-1725672</footprint>
+      <fields>
+        <field name="Manufacturer">Phoenix Contact</field>
+        <field name="MPN">1725672</field>
+        <field name="SKU">STUFF</field>
+      </fields>
+      <libsource lib="connect" part="SOCKET254P-01X04-1725672"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>584FF48E</tstamp>
+    </comp>
+    <comp ref="J6">
+      <value>CONN_01X03</value>
+      <footprint>Main:SOCKET254P-01X03</footprint>
+      <fields>
+        <field name="Manufacturer">TE Connectivity AMP Connectors</field>
+        <field name="MPN">3-644456-3</field>
+        <field name="SKU">STUFF</field>
+      </fields>
+      <libsource lib="connect" part="CONN_01X03"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>584FF497</tstamp>
+    </comp>
+    <comp ref="J7">
+      <value>CONN_01X04</value>
+      <footprint>Main:SOCKET254P-01X04</footprint>
+      <fields>
+        <field name="Manufacturer">TE Connectivity AMP Connectors</field>
+        <field name="MPN">3-644456-4</field>
+        <field name="SKU">STUFF</field>
+      </fields>
+      <libsource lib="connect" part="CONN_01X04"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>584FF4BD</tstamp>
+    </comp>
+    <comp ref="C6">
+      <value>C0603</value>
+      <footprint>Main:CAPC0603</footprint>
+      <fields>
+        <field name="C">10nF</field>
+        <field name="TC">X5R</field>
+        <field name="Vmax">16V</field>
+        <field name="Tol">10%</field>
+        <field name="SKU">STUFF</field>
+      </fields>
+      <libsource lib="devices" part="C0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58504055</tstamp>
+    </comp>
+    <comp ref="C7">
+      <value>C0603</value>
+      <footprint>Main:CAPC0603</footprint>
+      <fields>
+        <field name="C">10nF</field>
+        <field name="TC">X5R</field>
+        <field name="Vmax">16V</field>
+        <field name="Tol">10%</field>
+        <field name="SKU">STUFF</field>
+      </fields>
+      <libsource lib="devices" part="C0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>585048C0</tstamp>
+    </comp>
+    <comp ref="R9">
+      <value>R1206</value>
+      <footprint>Main:RESC1206</footprint>
+      <fields>
+        <field name="Pwr">62.5mW</field>
+        <field name="Res">400</field>
+        <field name="Tol">0.1%</field>
+        <field name="SKU">STUFF</field>
+      </fields>
+      <libsource lib="devices" part="R1206"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58509D8C</tstamp>
+    </comp>
+    <comp ref="R10">
+      <value>R1206</value>
+      <footprint>Main:RESC1206</footprint>
+      <fields>
+        <field name="Pwr">62.5mW</field>
+        <field name="Res">400</field>
+        <field name="Tol">0.1%</field>
+        <field name="SKU">STUFF</field>
+      </fields>
+      <libsource lib="devices" part="R1206"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5850A5AF</tstamp>
+    </comp>
+    <comp ref="C5">
+      <value>C0603</value>
+      <footprint>Main:CAPC0603</footprint>
+      <fields>
+        <field name="C">0.1uF</field>
+        <field name="TC">X5R</field>
+        <field name="Vmax">16V</field>
+        <field name="Tol">10%</field>
+        <field name="SKU">STUFF</field>
+      </fields>
+      <libsource lib="devices" part="C0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5850C542</tstamp>
+    </comp>
+    <comp ref="C3">
+      <value>C0603</value>
+      <footprint>Main:CAPC0603</footprint>
+      <fields>
+        <field name="C">0.1uF</field>
+        <field name="TC">X5R</field>
+        <field name="Vmax">16V</field>
+        <field name="Tol">10%</field>
+        <field name="SKU">STUFF</field>
+      </fields>
+      <libsource lib="devices" part="C0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5850C832</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>C0603</value>
+      <footprint>Main:CAPC0603</footprint>
+      <fields>
+        <field name="C">0.1uF</field>
+        <field name="TC">X5R</field>
+        <field name="Vmax">16V</field>
+        <field name="Tol">10%</field>
+        <field name="SKU">STUFF</field>
+      </fields>
+      <libsource lib="devices" part="C0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>585108C7</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>C0603</value>
+      <footprint>Main:CAPC0603</footprint>
+      <fields>
+        <field name="C">0.1uF</field>
+        <field name="TC">X5R</field>
+        <field name="Vmax">16V</field>
+        <field name="Tol">10%</field>
+        <field name="SKU">STUFF</field>
+      </fields>
+      <libsource lib="devices" part="C0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>585108D2</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>C0603</value>
+      <footprint>Main:CAPC0603</footprint>
+      <fields>
+        <field name="C">0.1uF</field>
+        <field name="TC">X5R</field>
+        <field name="Vmax">16V</field>
+        <field name="Tol">10%</field>
+        <field name="SKU">STUFF</field>
+      </fields>
+      <libsource lib="devices" part="C0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58515D9E</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>R0603</value>
+      <footprint>Main:RESC0603</footprint>
+      <fields>
+        <field name="Pwr">62.5mW</field>
+        <field name="Res">1k</field>
+        <field name="Tol">5%</field>
+        <field name="SKU">STUFF</field>
+      </fields>
+      <libsource lib="devices" part="R0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5851954D</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>R0603</value>
+      <footprint>Main:RESC0603</footprint>
+      <fields>
+        <field name="Pwr">62.5mW</field>
+        <field name="Res">1k</field>
+        <field name="Tol">5%</field>
+        <field name="SKU">STUFF</field>
+      </fields>
+      <libsource lib="devices" part="R0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58519B69</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>R0603</value>
+      <footprint>Main:RESC0603</footprint>
+      <fields>
+        <field name="Pwr">62.5mW</field>
+        <field name="Res">10k</field>
+        <field name="Tol">5%</field>
+        <field name="SKU">STUFF</field>
+      </fields>
+      <libsource lib="devices" part="R0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5851A3EF</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>R0603</value>
+      <footprint>Main:RESC0603</footprint>
+      <fields>
+        <field name="Pwr">62.5mW</field>
+        <field name="Res">10k</field>
+        <field name="Tol">5%</field>
+        <field name="SKU">STUFF</field>
+      </fields>
+      <libsource lib="devices" part="R0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5851AD20</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>R0603</value>
+      <footprint>Main:RESC0603</footprint>
+      <fields>
+        <field name="Pwr">62.5mW</field>
+        <field name="Res">10k</field>
+        <field name="Tol">5%</field>
+        <field name="SKU">STUFF</field>
+      </fields>
+      <libsource lib="devices" part="R0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5852A83A</tstamp>
+    </comp>
+    <comp ref="R6">
+      <value>R0603</value>
+      <footprint>Main:RESC0603</footprint>
+      <fields>
+        <field name="Pwr">62.5mW</field>
+        <field name="Res">10k</field>
+        <field name="Tol">5%</field>
+        <field name="SKU">STUFF</field>
+      </fields>
+      <libsource lib="devices" part="R0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5852A8BF</tstamp>
+    </comp>
+    <comp ref="R7">
+      <value>R0603</value>
+      <footprint>Main:RESC0603</footprint>
+      <fields>
+        <field name="Pwr">62.5mW</field>
+        <field name="Res">10k</field>
+        <field name="Tol">5%</field>
+        <field name="SKU">STUFF</field>
+      </fields>
+      <libsource lib="devices" part="R0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5852AB58</tstamp>
+    </comp>
+    <comp ref="R8">
+      <value>R0603</value>
+      <footprint>Main:RESC0603</footprint>
+      <fields>
+        <field name="Pwr">62.5mW</field>
+        <field name="Res">10k</field>
+        <field name="Tol">5%</field>
+        <field name="SKU">STUFF</field>
+      </fields>
+      <libsource lib="devices" part="R0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5852AB69</tstamp>
+    </comp>
+    <comp ref="R12">
+      <value>R0603</value>
+      <footprint>Main:RESC0603</footprint>
+      <fields>
+        <field name="Pwr">62.5mW</field>
+        <field name="Res">10k</field>
+        <field name="Tol">5%</field>
+        <field name="SKU">STUFF</field>
+      </fields>
+      <libsource lib="devices" part="R0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>585302BE</tstamp>
+    </comp>
+    <comp ref="R11">
+      <value>R0603</value>
+      <footprint>Main:RESC0603</footprint>
+      <fields>
+        <field name="Pwr">62.5mW</field>
+        <field name="Res">10k</field>
+        <field name="Tol">5%</field>
+        <field name="SKU">STUFF</field>
+      </fields>
+      <libsource lib="devices" part="R0603"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58530D7A</tstamp>
+    </comp>
+    <comp ref="J8">
+      <value>CONN_01X03</value>
+      <footprint>Main:SOCKET254P-01X03</footprint>
+      <fields>
+        <field name="Manufacturer">TE Connectivity AMP Connectors</field>
+        <field name="MPN">3-644456-3</field>
+        <field name="SKU">STUFF</field>
+      </fields>
+      <libsource lib="connect" part="CONN_01X03"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58532ED2</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="devices" part="C0603">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C?</fp>
+        <fp>C_????_*</fp>
+        <fp>C_????</fp>
+        <fp>SMD*_c</fp>
+        <fp>Capacitor*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C0603</field>
+        <field name="Footprint">Main:CAPC0603</field>
+        <field name="C">10nF</field>
+        <field name="TC">X5R</field>
+        <field name="Vmax">16V</field>
+        <field name="Tol">10%</field>
+        <field name="SKU">STUFF</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="connect" part="CONN_01X03">
+      <description>Connector 01x03</description>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">CONN_01X03</field>
+        <field name="Footprint">Main:SOCKET254P-01X03</field>
+        <field name="Manufacturer">TE Connectivity AMP Connectors</field>
+        <field name="MPN">3-644456-3</field>
+        <field name="SKU">STUFF</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="connect" part="CONN_01X04">
+      <description>Connector 01x04</description>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">CONN_01X04</field>
+        <field name="Footprint">Main:SOCKET254P-01X04</field>
+        <field name="Manufacturer">TE Connectivity AMP Connectors</field>
+        <field name="MPN">3-644456-4</field>
+        <field name="SKU">STUFF</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="microcontroller" part="EFM8BB10F2G">
+      <description>IC MCU 8BIT 2KB FLASH 20QFN</description>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">EFM8BB10F2G</field>
+        <field name="Footprint">Main:QFN50P300X300X75-20NT170X170</field>
+        <field name="Manufacturer">Silicon Labs</field>
+        <field name="MPN">EFM8BB10F2G-A-QFN20R</field>
+        <field name="SKU">STUFF</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P0.1" type="BiDi"/>
+        <pin num="2" name="P0.0" type="BiDi"/>
+        <pin num="3" name="GND" type="power_in"/>
+        <pin num="4" name="VDD" type="power_in"/>
+        <pin num="5" name="~RST~/C2CK" type="input"/>
+        <pin num="6" name="C2D/P2.0" type="BiDi"/>
+        <pin num="7" name="P1.6" type="BiDi"/>
+        <pin num="8" name="P1.5" type="BiDi"/>
+        <pin num="9" name="P1.4" type="BiDi"/>
+        <pin num="10" name="P1.3" type="BiDi"/>
+        <pin num="11" name="P1.2" type="BiDi"/>
+        <pin num="12" name="GND" type="power_in"/>
+        <pin num="13" name="P1.1" type="BiDi"/>
+        <pin num="14" name="P1.0" type="BiDi"/>
+        <pin num="15" name="P0.7" type="BiDi"/>
+        <pin num="16" name="P0.6" type="BiDi"/>
+        <pin num="17" name="P0.5" type="BiDi"/>
+        <pin num="18" name="P0.4" type="BiDi"/>
+        <pin num="19" name="P0.3" type="BiDi"/>
+        <pin num="20" name="P0.2" type="BiDi"/>
+        <pin num="21" name="GND_TP" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="analog" part="MAX31865AAP+">
+      <description>RTD-to-Digital Converter</description>
+      <footprints>
+        <fp>eSSOP-20_4.4x6.5mm_Pitch0.65mm_TP</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MAX31865AAP+</field>
+        <field name="Footprint">Main:SOP65P720X530X186-20</field>
+        <field name="Manufacturer">Maxim Integrated</field>
+        <field name="MPN">MAX31865AAP+</field>
+        <field name="SKU">STUFF</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~DRDY" type="openCol"/>
+        <pin num="2" name="DVDD" type="power_in"/>
+        <pin num="3" name="VDD" type="power_in"/>
+        <pin num="4" name="BIAS" type="BiDi"/>
+        <pin num="5" name="REFIN+" type="input"/>
+        <pin num="6" name="REFIN-" type="input"/>
+        <pin num="7" name="ISENSOR" type="BiDi"/>
+        <pin num="8" name="FORCE+" type="BiDi"/>
+        <pin num="9" name="FORCE2" type="BiDi"/>
+        <pin num="10" name="RTDIN+" type="BiDi"/>
+        <pin num="11" name="RTDIN-" type="BiDi"/>
+        <pin num="12" name="FORCE-" type="BiDi"/>
+        <pin num="13" name="GND2" type="power_in"/>
+        <pin num="14" name="SDI" type="input"/>
+        <pin num="15" name="SCLK" type="input"/>
+        <pin num="16" name="~CS" type="input"/>
+        <pin num="17" name="SDO" type="output"/>
+        <pin num="18" name="DGND" type="BiDi"/>
+        <pin num="19" name="GND1" type="BiDi"/>
+        <pin num="20" name="NC" type="NotConnected"/>
+      </pins>
+    </libpart>
+    <libpart lib="connect" part="PCIEXPRESS-X1">
+      <description>PCI Express x1 Board Edge</description>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">PCIEXPRESS-X1</field>
+        <field name="Footprint">Main:PCIEXPRESS-X1</field>
+        <field name="Manufacturer">Amphenol FCI</field>
+        <field name="MPN">10018784-10200TLF</field>
+      </fields>
+      <pins>
+        <pin num="A1" name="A1" type="BiDi"/>
+        <pin num="A2" name="A2" type="BiDi"/>
+        <pin num="A3" name="A3" type="BiDi"/>
+        <pin num="A4" name="A4" type="BiDi"/>
+        <pin num="A5" name="A5" type="BiDi"/>
+        <pin num="A6" name="A6" type="BiDi"/>
+        <pin num="A7" name="A7" type="BiDi"/>
+        <pin num="A8" name="A8" type="BiDi"/>
+        <pin num="A9" name="A9" type="BiDi"/>
+        <pin num="A10" name="A10" type="BiDi"/>
+        <pin num="A11" name="A11" type="BiDi"/>
+        <pin num="A12" name="A12" type="BiDi"/>
+        <pin num="A13" name="A13" type="BiDi"/>
+        <pin num="A14" name="A14" type="BiDi"/>
+        <pin num="A15" name="A15" type="BiDi"/>
+        <pin num="A16" name="A16" type="BiDi"/>
+        <pin num="A17" name="A17" type="BiDi"/>
+        <pin num="A18" name="A18" type="BiDi"/>
+        <pin num="B1" name="B1" type="BiDi"/>
+        <pin num="B2" name="B2" type="BiDi"/>
+        <pin num="B3" name="B3" type="BiDi"/>
+        <pin num="B4" name="B4" type="BiDi"/>
+        <pin num="B5" name="B5" type="BiDi"/>
+        <pin num="B6" name="B6" type="BiDi"/>
+        <pin num="B7" name="B7" type="BiDi"/>
+        <pin num="B8" name="B8" type="BiDi"/>
+        <pin num="B9" name="B9" type="BiDi"/>
+        <pin num="B10" name="B10" type="BiDi"/>
+        <pin num="B11" name="B11" type="BiDi"/>
+        <pin num="B12" name="B12" type="BiDi"/>
+        <pin num="B13" name="B13" type="BiDi"/>
+        <pin num="B14" name="B14" type="BiDi"/>
+        <pin num="B15" name="B15" type="BiDi"/>
+        <pin num="B16" name="B16" type="BiDi"/>
+        <pin num="B17" name="B17" type="BiDi"/>
+        <pin num="B18" name="B18" type="BiDi"/>
+      </pins>
+    </libpart>
+    <libpart lib="devices" part="R0603">
+      <description>Resistor</description>
+      <footprints>
+        <fp>Resistor_*</fp>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R0603</field>
+        <field name="Footprint">Main:RESC0603</field>
+        <field name="Pwr">62.5mW</field>
+        <field name="Res">1k</field>
+        <field name="Tol">5%</field>
+        <field name="SKU">STUFF</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="devices" part="R1206">
+      <description>Resistor</description>
+      <footprints>
+        <fp>Resistor_*</fp>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R1206</field>
+        <field name="Footprint">Main:RESC1206</field>
+        <field name="Pwr">62.5mW</field>
+        <field name="Res">1k</field>
+        <field name="Tol">5%</field>
+        <field name="SKU">STUFF</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="connect" part="SOCKET254P-01X04-1725672">
+      <description>Connector 01x04</description>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">SOCKET254P-01X04-1725672</field>
+        <field name="Footprint">Main:SOCKET254P-01X04-1725672</field>
+        <field name="Manufacturer">Phoenix Contact</field>
+        <field name="MPN">1725672</field>
+        <field name="SKU">STUFF</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="analog">
+      <uri>/home/sherif/git/KiCADLibs/sch/analog.lib</uri>
+    </library>
+    <library logical="connect">
+      <uri>/home/sherif/git/KiCADLibs/sch/connect.lib</uri>
+    </library>
+    <library logical="microcontroller">
+      <uri>/home/sherif/git/KiCADLibs/sch/microcontroller.lib</uri>
+    </library>
+    <library logical="devices">
+      <uri>/home/sherif/git/KiCADLibs/sch/devices.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="SCLK_B">
+      <node ref="J1" pin="B17"/>
+    </net>
+    <net code="2" name="RESERVED0">
+      <node ref="J1" pin="B16"/>
+    </net>
+    <net code="3" name="HT">
+      <node ref="J1" pin="A1"/>
+      <node ref="J1" pin="A8"/>
+      <node ref="J1" pin="A2"/>
+      <node ref="J1" pin="A7"/>
+      <node ref="J1" pin="A6"/>
+      <node ref="J1" pin="A3"/>
+      <node ref="J1" pin="A4"/>
+      <node ref="J1" pin="A5"/>
+    </net>
+    <net code="4" name="GND">
+      <node ref="U2" pin="18"/>
+      <node ref="U2" pin="13"/>
+      <node ref="U2" pin="19"/>
+      <node ref="U1" pin="13"/>
+      <node ref="J8" pin="3"/>
+      <node ref="J1" pin="B8"/>
+      <node ref="C1" pin="2"/>
+      <node ref="J6" pin="3"/>
+      <node ref="C2" pin="2"/>
+      <node ref="C4" pin="2"/>
+      <node ref="J1" pin="B3"/>
+      <node ref="U4" pin="21"/>
+      <node ref="U4" pin="12"/>
+      <node ref="J1" pin="B1"/>
+      <node ref="J1" pin="B2"/>
+      <node ref="J1" pin="B4"/>
+      <node ref="J1" pin="B5"/>
+      <node ref="J1" pin="B6"/>
+      <node ref="J1" pin="B7"/>
+      <node ref="C3" pin="2"/>
+      <node ref="C5" pin="2"/>
+      <node ref="U4" pin="3"/>
+      <node ref="U1" pin="18"/>
+      <node ref="U1" pin="19"/>
+      <node ref="J4" pin="3"/>
+    </net>
+    <net code="5" name="C2D">
+      <node ref="R4" pin="1"/>
+      <node ref="J8" pin="2"/>
+      <node ref="U4" pin="6"/>
+      <node ref="R3" pin="1"/>
+    </net>
+    <net code="6" name="~MRESET">
+      <node ref="J8" pin="1"/>
+      <node ref="R1" pin="1"/>
+      <node ref="R2" pin="2"/>
+      <node ref="U4" pin="5"/>
+    </net>
+    <net code="7" name="+3V3">
+      <node ref="C1" pin="1"/>
+      <node ref="R5" pin="2"/>
+      <node ref="R4" pin="2"/>
+      <node ref="U2" pin="3"/>
+      <node ref="U1" pin="2"/>
+      <node ref="C5" pin="1"/>
+      <node ref="J1" pin="B9"/>
+      <node ref="J1" pin="B10"/>
+      <node ref="J1" pin="B11"/>
+      <node ref="U1" pin="3"/>
+      <node ref="R1" pin="2"/>
+      <node ref="U4" pin="4"/>
+      <node ref="U2" pin="2"/>
+      <node ref="R6" pin="2"/>
+      <node ref="R7" pin="2"/>
+      <node ref="C4" pin="1"/>
+      <node ref="R8" pin="2"/>
+      <node ref="R11" pin="2"/>
+      <node ref="R12" pin="2"/>
+      <node ref="C2" pin="1"/>
+      <node ref="C3" pin="1"/>
+    </net>
+    <net code="8" name="SDA">
+      <node ref="R11" pin="1"/>
+      <node ref="U4" pin="18"/>
+      <node ref="J1" pin="A17"/>
+    </net>
+    <net code="9" name="SCL">
+      <node ref="R12" pin="1"/>
+      <node ref="J1" pin="A16"/>
+      <node ref="U4" pin="19"/>
+    </net>
+    <net code="10" name="+5V">
+      <node ref="J1" pin="A9"/>
+      <node ref="J1" pin="A10"/>
+      <node ref="J1" pin="A11"/>
+    </net>
+    <net code="11" name="PX4">
+      <node ref="J1" pin="A15"/>
+    </net>
+    <net code="12" name="PX3">
+      <node ref="J1" pin="A14"/>
+    </net>
+    <net code="13" name="PX2">
+      <node ref="J1" pin="A13"/>
+    </net>
+    <net code="14" name="PX1">
+      <node ref="J1" pin="A12"/>
+    </net>
+    <net code="15" name="ID3">
+      <node ref="U4" pin="10"/>
+      <node ref="J1" pin="B15"/>
+      <node ref="R8" pin="1"/>
+    </net>
+    <net code="16" name="Net-(U4-Pad17)">
+      <node ref="U4" pin="17"/>
+    </net>
+    <net code="17" name="ID2">
+      <node ref="R7" pin="1"/>
+      <node ref="U4" pin="9"/>
+      <node ref="J1" pin="B14"/>
+    </net>
+    <net code="18" name="ID1">
+      <node ref="J1" pin="B13"/>
+      <node ref="U4" pin="8"/>
+      <node ref="R6" pin="1"/>
+    </net>
+    <net code="19" name="ID0">
+      <node ref="J1" pin="B12"/>
+      <node ref="U4" pin="7"/>
+      <node ref="R5" pin="1"/>
+    </net>
+    <net code="20" name="Net-(U4-Pad11)">
+      <node ref="U4" pin="11"/>
+    </net>
+    <net code="21" name="/R-_1">
+      <node ref="R9" pin="2"/>
+      <node ref="U1" pin="6"/>
+      <node ref="U1" pin="7"/>
+    </net>
+    <net code="22" name="/R+_1">
+      <node ref="R9" pin="1"/>
+      <node ref="U1" pin="5"/>
+      <node ref="U1" pin="4"/>
+    </net>
+    <net code="23" name="/R+_2">
+      <node ref="U2" pin="4"/>
+      <node ref="U2" pin="5"/>
+      <node ref="R10" pin="1"/>
+    </net>
+    <net code="24" name="/R-_2">
+      <node ref="U2" pin="7"/>
+      <node ref="U2" pin="6"/>
+      <node ref="R10" pin="2"/>
+    </net>
+    <net code="25" name="/MOSI">
+      <node ref="U2" pin="14"/>
+      <node ref="U4" pin="20"/>
+      <node ref="U1" pin="14"/>
+    </net>
+    <net code="26" name="/~CS~1">
+      <node ref="U1" pin="16"/>
+      <node ref="U4" pin="14"/>
+    </net>
+    <net code="27" name="/SCLK">
+      <node ref="U1" pin="15"/>
+      <node ref="U4" pin="2"/>
+      <node ref="U2" pin="15"/>
+    </net>
+    <net code="28" name="/~DRDY~1">
+      <node ref="U1" pin="1"/>
+      <node ref="U4" pin="13"/>
+    </net>
+    <net code="29" name="/MISO">
+      <node ref="U1" pin="17"/>
+      <node ref="U4" pin="1"/>
+      <node ref="U2" pin="17"/>
+    </net>
+    <net code="30" name="/~CS~2">
+      <node ref="U4" pin="16"/>
+      <node ref="U2" pin="16"/>
+    </net>
+    <net code="31" name="/~DRDY~2">
+      <node ref="U4" pin="15"/>
+      <node ref="U2" pin="1"/>
+    </net>
+    <net code="32" name="Net-(U2-Pad20)">
+      <node ref="U2" pin="20"/>
+    </net>
+    <net code="33" name="Net-(U1-Pad20)">
+      <node ref="U1" pin="20"/>
+    </net>
+    <net code="34" name="/FORCE+_1">
+      <node ref="J4" pin="1"/>
+      <node ref="U1" pin="8"/>
+      <node ref="J5" pin="1"/>
+      <node ref="J3" pin="1"/>
+    </net>
+    <net code="35" name="/RTDIN+_1">
+      <node ref="J5" pin="2"/>
+      <node ref="C6" pin="1"/>
+      <node ref="U1" pin="10"/>
+      <node ref="J3" pin="2"/>
+    </net>
+    <net code="36" name="/RTDIN-_1">
+      <node ref="U1" pin="11"/>
+      <node ref="C6" pin="2"/>
+      <node ref="J5" pin="3"/>
+      <node ref="J3" pin="3"/>
+    </net>
+    <net code="37" name="/FORCE-_1">
+      <node ref="U1" pin="12"/>
+      <node ref="J3" pin="4"/>
+      <node ref="J5" pin="4"/>
+    </net>
+    <net code="38" name="/FORCE2_1">
+      <node ref="U1" pin="9"/>
+      <node ref="J4" pin="2"/>
+    </net>
+    <net code="39" name="/C2D_CON">
+      <node ref="R3" pin="2"/>
+      <node ref="J1" pin="B18"/>
+    </net>
+    <net code="40" name="/~MRESET~_CON">
+      <node ref="J1" pin="A18"/>
+      <node ref="R2" pin="1"/>
+    </net>
+    <net code="41" name="/FORCE2_2">
+      <node ref="U2" pin="9"/>
+      <node ref="J6" pin="2"/>
+    </net>
+    <net code="42" name="/FORCE-_2">
+      <node ref="J2" pin="4"/>
+      <node ref="J7" pin="4"/>
+      <node ref="U2" pin="12"/>
+    </net>
+    <net code="43" name="/RTDIN-_2">
+      <node ref="U2" pin="11"/>
+      <node ref="J2" pin="3"/>
+      <node ref="C7" pin="2"/>
+      <node ref="J7" pin="3"/>
+    </net>
+    <net code="44" name="/RTDIN+_2">
+      <node ref="J7" pin="2"/>
+      <node ref="U2" pin="10"/>
+      <node ref="C7" pin="1"/>
+      <node ref="J2" pin="2"/>
+    </net>
+    <net code="45" name="/FORCE+_2">
+      <node ref="J7" pin="1"/>
+      <node ref="U2" pin="8"/>
+      <node ref="J6" pin="1"/>
+      <node ref="J2" pin="1"/>
+    </net>
+  </nets>
+</export>
