@@ -25,9 +25,6 @@ char ch2config;
 
 char faultstat;
 
-float ifloat;                   // a temporary variable for storing floating numbers
-                                // seems that I2C transactions corrupt variables used by other functions
-
 // Output pins
 SBIT(STAT, SFR_P2, 0);                                  // debug output used to measure timing
 
@@ -69,11 +66,9 @@ int main (void)
    {
 //	    Delay_ms(DELAYCALC);            // delay 100ms
 	    ch1config = spi_readreg(1, MAX31865_CONFIG);        // read config register CH1
+	    ch1res.f = readRTDres(1);
 	    STAT = 1;
-	    ifloat = readRTDres(1);
-	    ch1res.f = ifloat;
-	    ifloat = readRTDtemp(ch1res.f);                     // read and process CH1 PT100 temperature
-	    ch1temp.f = ifloat;
+	    ch1temp.f = readRTDtemp(ch1res.f);                  // read and process CH1 PT100 temperature
 	    STAT = 0;
 
 	    ch2config = spi_readreg(2, MAX31865_CONFIG);        // read config register CH2

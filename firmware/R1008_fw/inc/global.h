@@ -20,8 +20,6 @@
 // Global VARIABLES
 //-----------------------------------------------------------------------------
 extern char temp_val;		    // processed MCU temperature value
-extern char rtdmsb;             // RTD raw MSB
-extern char rtdlsb;             // RTD raw LSB
 
 // Unions
 union temperature {
