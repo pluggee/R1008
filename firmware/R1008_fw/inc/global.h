@@ -19,13 +19,26 @@
 //-----------------------------------------------------------------------------
 // Global VARIABLES
 //-----------------------------------------------------------------------------
-extern char temp_val;				    // processed temperature value
-extern float ch1temp;                   // channel 1 PT100 temperature
-extern float ch2temp;                   // channel 2 PT100 temperature
+extern char temp_val;		    // processed MCU temperature value
+extern char rtdmsb;             // RTD raw MSB
+extern char rtdlsb;             // RTD raw LSB
 
+// Unions
+union temperature {
+    float f;
+    char c[4];
+};
 
-extern char rtdmsb;
-extern char rtdlsb;               // make them global
+extern union temperature ch1temp;       // channel 1 PT100 temperature
+extern union temperature ch2temp;       // channel 2 PT100 temperature
+
+extern union temperature ch1res;        // channel 1 PT100 resistance
+extern union temperature ch2res;        // channel 2 PT100 resistance
+
+extern char ch1config;                  // value of config registers
+extern char ch2config;                  // value of config registers
+
+extern char faultstat;                  // stores fault status, B0 (CH1 fault), B1 (CH2 fault)
 
 // I2C REGISTER/COMMAND Definitions
 // ---------------------------------
@@ -44,6 +57,12 @@ extern char rtdlsb;               // make them global
 #define TGT_CMD_RTD1TEMP            0x32    // channel 1 PT100 temperature readout
 #define TGT_CMD_RTD2TEMP            0x33    // channel 2 PT100 temperature readout
 
-#define DEBUGFW                             // this is only used for output debug
+#define TGT_CMD_RTD1RES             0x34    // channel 1 PT100 resistance readout
+#define TGT_CMD_RTD2RES             0x35    // channel 2 PT100 resistance readout
+
+#define TGT_CMD_CH1CFG              0x36    // channel 1 config register
+#define TGT_CMD_CH2CFG              0x37    // channel 2 config register
+
+#define TGT_CMD_RTDFAULT            0x38    // reads out and resets fault status
 
 #endif /* GLOBAL_H_ */

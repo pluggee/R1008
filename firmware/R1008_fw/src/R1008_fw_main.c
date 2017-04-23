@@ -14,13 +14,22 @@
 // [Generated Includes]$
 
 // Global variables
-float ch1temp;
-float ch2temp;
+union temperature ch1temp;
+union temperature ch2temp;
+
+union temperature ch1res;
+union temperature ch2res;
+
+char ch1config;
+char ch2config;
+
+char faultstat;
+
+float ifloat;                   // a temporary variable for storing floating numbers
+                                // seems that I2C transactions corrupt variables used by other functions
 
 // Output pins
-#ifdef DEBUGFW
 SBIT(STAT, SFR_P2, 0);                                  // debug output used to measure timing
-#endif
 
 // Global holder for SMBus data.
 // All receive data is written here
@@ -41,9 +50,8 @@ void Init (void)
 {
 	SetI2CSlaveAddress();               // Initialize I2C slave address
 	// Initialize RTD sensor
-#ifdef DEBUGFW
 	P2MDOUT = 0x01;                     // set P2.0 (C2D) pin to output push pull for debugging
-#endif
+	faultstat = 0x00;
 }
 
 //-----------------------------------------------------------------------------
@@ -55,23 +63,22 @@ int main (void)
 	enter_DefaultMode_from_RESET();
 	Init();				                // Initialize system
 
-#ifdef DEBUGFW
     STAT = 0;
-#endif
 
 	while (1) 
    {
-	    Delay_ms(DELAYCALC);            // delay 100ms
-#ifdef DEBUGFW
-	    dumpreg();
+//	    Delay_ms(DELAYCALC);            // delay 100ms
+	    ch1config = spi_readreg(1, MAX31865_CONFIG);        // read config register CH1
 	    STAT = 1;
-#endif
-	    ch1temp = readRTDtemp(1);                   // read and process CH1 PT100 temperature
-#ifdef DEBUGFW
+	    ifloat = readRTDres(1);
+	    ch1res.f = ifloat;
+	    ifloat = readRTDtemp(ch1res.f);                     // read and process CH1 PT100 temperature
+	    ch1temp.f = ifloat;
 	    STAT = 0;
-#endif
 
-//	    ch2temp = readRTDtemp(2);                   // read and process CH1 PT100 temperature
+	    ch2config = spi_readreg(2, MAX31865_CONFIG);        // read config register CH2
+	    ch2res.f = readRTDres(2);
+        ch2temp.f = readRTDtemp(ch2res.f);                  // read and process CH2 PT100 temperature
 
 	    // read and process CH2 PT100 temperature
 	    // read and process internal temperature sensor

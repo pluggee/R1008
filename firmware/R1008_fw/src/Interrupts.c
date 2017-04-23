@@ -13,11 +13,7 @@
 #include "global.h"
 #include "math.h"
 #include "InfoBlock.h"
-#include <string.h>
 #include "max31865.h"
-
-//extern uint32_t ADC_SUM;               // Accumulates the ADC samples
-//extern bit CONV_COMPLETE;              // ADC accumulated result ready flag
 
 uint32_t ADC_SUM;                           // Accumulates the ADC samples
 //bit CONV_COMPLETE;                        // ADC accumulated result ready flag
@@ -201,26 +197,46 @@ SI_INTERRUPT (SMBUS0_ISR, SMBUS0_IRQn)
             SMB_DATA_OUT[0] = 0x00;                         // indicating application mode
             break;
         case TGT_CMD_RTD1TEMP:
-            memcpy(SMB_DATA_OUT, &ch1temp, sizeof(float));
+            SMB_DATA_OUT[0] = ch1temp.c[0];
+            SMB_DATA_OUT[1] = ch1temp.c[1];
+            SMB_DATA_OUT[2] = ch1temp.c[2];
+            SMB_DATA_OUT[3] = ch1temp.c[3];
             break;
         case TGT_CMD_RTD2TEMP:
-            memcpy(SMB_DATA_OUT, &ch2temp, sizeof(float));
+            SMB_DATA_OUT[0] = ch2temp.c[0];
+            SMB_DATA_OUT[1] = ch2temp.c[1];
+            SMB_DATA_OUT[2] = ch2temp.c[2];
+            SMB_DATA_OUT[3] = ch2temp.c[3];
             break;
-#ifdef DEBUGFW
-        case 0x34:
-            SMB_DATA_OUT[0] = rtdlsb;
-            SMB_DATA_OUT[1] = rtdmsb;
+        case TGT_CMD_RTD1RES:
+            SMB_DATA_OUT[0] = ch1res.c[0];
+            SMB_DATA_OUT[1] = ch1res.c[1];
+            SMB_DATA_OUT[2] = ch1res.c[2];
+            SMB_DATA_OUT[3] = ch1res.c[3];
             break;
-        case 0x36:
+        case TGT_CMD_RTD2RES:
+            SMB_DATA_OUT[0] = ch2res.c[0];
+            SMB_DATA_OUT[1] = ch2res.c[1];
+            SMB_DATA_OUT[2] = ch2res.c[2];
+            SMB_DATA_OUT[3] = ch2res.c[3];
+            break;
+        case TGT_CMD_CH1CFG:
+//            if (writelen > 1){
+//                // this is a write command, transfer
+//            }
+            SMB_DATA_OUT[0] = ch1config;
+            break;
+        case TGT_CMD_CH2CFG:
+//            if (writelen > 1){
+//                // this is a write command, transfer
+//            }
+            SMB_DATA_OUT[0] = ch2config;
+            break;
+        case TGT_CMD_RTDFAULT:
+            // read out fault status
             SMB_DATA_OUT[0] = faultstat;
+            faultstat = 0x00;
             break;
-        case 0x37:
-            SMB_DATA_OUT[0] = r_hftlsb;
-            SMB_DATA_OUT[1] = r_hftmsb;
-            SMB_DATA_OUT[2] = r_lftlsb;
-            SMB_DATA_OUT[3] = r_lftmsb;
-            break;
-#endif
         default:
             break;
         }

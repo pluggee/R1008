@@ -25,7 +25,7 @@
 #define REFRES              402     // reference resistor value
 
 // Algorithm constants
-#define NITERATIONS         16      // number of search iterations
+#define NITERATIONS         20      // number of search iterations
 #define TMIDDLE             150     // initial temperature for PT100 successive search algorithm
 #define TSTEP0              350     // initial step size for successive search algorithm
                                     // temperature range covered from (TMIDDLE - TSTEP0) to (TMIDDLE + TSTEP0)
@@ -34,21 +34,15 @@
 
 // function declarations
 void max31865_init(void);
-void spi_wr_cfg(char , char);
-char spi_rd_cfg(char);
 float calcR(float);
-float readRTDtemp(char);
+float readRTDtemp(float);
+float readRTDres(char);
 
 char spi_readreg(char, char);
 void spi_writereg(char, char, char);
 
 void Delay_ms (unsigned int);       // timer based ms delay
 
-#ifdef DEBUGFW
-extern char faultstat;
-extern char r_hftlsb,r_hftmsb,r_lftlsb,r_lftmsb;
-void dumpreg(void);
-#endif
 
 
 #endif /* MAX31865_H_ */

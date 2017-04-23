@@ -53,17 +53,17 @@ extern void PORTS_0_enter_DefaultMode_from_RESET(void) {
 
     // $[P0MDOUT - Port 0 Output Mode]
     /*
-     // P0.0 output is open-drain
+     // P0.0 output is push-pull
      // P0.1 output is open-drain
-     // P0.2 output is open-drain
+     // P0.2 output is push-pull
      // P0.3 output is open-drain
      // P0.4 output is open-drain
      // P0.5 output is open-drain
      // P0.6 output is push-pull
      // P0.7 output is open-drain
      */
-    P0MDOUT = P0MDOUT_B0__OPEN_DRAIN | P0MDOUT_B1__OPEN_DRAIN
-            | P0MDOUT_B2__OPEN_DRAIN | P0MDOUT_B3__OPEN_DRAIN
+    P0MDOUT = P0MDOUT_B0__PUSH_PULL | P0MDOUT_B1__OPEN_DRAIN
+            | P0MDOUT_B2__PUSH_PULL | P0MDOUT_B3__OPEN_DRAIN
             | P0MDOUT_B4__OPEN_DRAIN | P0MDOUT_B5__OPEN_DRAIN
             | P0MDOUT_B6__PUSH_PULL | P0MDOUT_B7__OPEN_DRAIN;
     // [P0MDOUT - Port 0 Output Mode]$
@@ -72,6 +72,20 @@ extern void PORTS_0_enter_DefaultMode_from_RESET(void) {
     // [P0MDIN - Port 0 Input Mode]$
 
     // $[P0SKIP - Port 0 Skip]
+    /*
+     // P0.0 pin is not skipped by the crossbar
+     // P0.1 pin is not skipped by the crossbar
+     // P0.2 pin is not skipped by the crossbar
+     // P0.3 pin is not skipped by the crossbar
+     // P0.4 pin is not skipped by the crossbar
+     // P0.5 pin is skipped by the crossbar
+     // P0.6 pin is skipped by the crossbar
+     // P0.7 pin is skipped by the crossbar
+     */
+    P0SKIP = P0SKIP_B0__NOT_SKIPPED | P0SKIP_B1__NOT_SKIPPED
+            | P0SKIP_B2__NOT_SKIPPED | P0SKIP_B3__NOT_SKIPPED
+            | P0SKIP_B4__NOT_SKIPPED | P0SKIP_B5__SKIPPED | P0SKIP_B6__SKIPPED
+            | P0SKIP_B7__SKIPPED;
     // [P0SKIP - Port 0 Skip]$
 
     // $[P0MASK - Port 0 Mask]
@@ -106,6 +120,18 @@ extern void PORTS_1_enter_DefaultMode_from_RESET(void) {
     // [P1MDIN - Port 1 Input Mode]$
 
     // $[P1SKIP - Port 1 Skip]
+    /*
+     // P1.0 pin is skipped by the crossbar
+     // P1.1 pin is skipped by the crossbar
+     // P1.2 pin is skipped by the crossbar
+     // P1.3 pin is skipped by the crossbar
+     // P1.4 pin is skipped by the crossbar
+     // P1.5 pin is skipped by the crossbar
+     // P1.6 pin is skipped by the crossbar
+     */
+    P1SKIP = P1SKIP_B0__SKIPPED | P1SKIP_B1__SKIPPED | P1SKIP_B2__SKIPPED
+            | P1SKIP_B3__SKIPPED | P1SKIP_B4__SKIPPED | P1SKIP_B5__SKIPPED
+            | P1SKIP_B6__SKIPPED;
     // [P1SKIP - Port 1 Skip]$
 
     // $[P1MASK - Port 1 Mask]
@@ -131,7 +157,8 @@ extern void PBCFG_0_enter_DefaultMode_from_RESET(void) {
     // $[XBR0 - Port I/O Crossbar 0]
     /*
      // UART I/O unavailable at Port pin
-     // SPI I/O unavailable at Port pins
+     // SPI I/O routed to Port pins. The SPI can be assigned either 3 or 4
+     //     GPIO pins
      // SMBus 0 I/O routed to Port pins
      // CP0 unavailable at Port pin
      // Asynchronous CP0 unavailable at Port pin
@@ -139,7 +166,7 @@ extern void PBCFG_0_enter_DefaultMode_from_RESET(void) {
      // Asynchronous CP1 unavailable at Port pin
      // SYSCLK unavailable at Port pin
      */
-    XBR0 = XBR0_URT0E__DISABLED | XBR0_SPI0E__DISABLED | XBR0_SMB0E__ENABLED
+    XBR0 = XBR0_URT0E__DISABLED | XBR0_SPI0E__ENABLED | XBR0_SMB0E__ENABLED
             | XBR0_CP0E__DISABLED | XBR0_CP0AE__DISABLED | XBR0_CP1E__DISABLED
             | XBR0_CP1AE__DISABLED | XBR0_SYSCKE__DISABLED;
     // [XBR0 - Port I/O Crossbar 0]$
@@ -538,16 +565,19 @@ extern void PCACH_0_enter_DefaultMode_from_RESET(void) {
 extern void SPI_0_enter_DefaultMode_from_RESET(void) {
     // $[SPI0CKR - SPI0 Clock Rate]
     /*
-     // SPI0 Clock Rate = 0x07
+     // SPI0 Clock Rate = 0x78
      */
-    SPI0CKR = (0x07 << SPI0CKR_SPI0CKR__SHIFT);
+    SPI0CKR = (0x78 << SPI0CKR_SPI0CKR__SHIFT);
     // [SPI0CKR - SPI0 Clock Rate]$
 
     // $[SPI0CFG - SPI0 Configuration]
     /*
+     // Data centered on second edge of SCK period
+     // SCK line high in idle state
      // Enable master mode. Operate as a master
      */
-    SPI0CFG |= SPI0CFG_MSTEN__MASTER_ENABLED;
+    SPI0CFG |= SPI0CFG_CKPHA__DATA_CENTERED_SECOND | SPI0CFG_CKPOL__IDLE_HIGH
+            | SPI0CFG_MSTEN__MASTER_ENABLED;
     // [SPI0CFG - SPI0 Configuration]$
 
     // $[SPI0CN0 - SPI0 Control]
