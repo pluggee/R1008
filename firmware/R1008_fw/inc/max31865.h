@@ -22,12 +22,12 @@
 #define  MAX31865_FAULT     0x07    // Fault status
 
 // Board components
-#define REFRES              402     // reference resistor value
+#define REFRES              402.0   // reference resistor value (note .0 at the end)
 
 // Algorithm constants
 #define NITERATIONS         20      // number of search iterations
-#define TMIDDLE             150     // initial temperature for PT100 successive search algorithm
-#define TSTEP0              350     // initial step size for successive search algorithm
+#define TMIDDLE             150.1     // initial temperature for PT100 successive search algorithm
+#define TSTEP0              350.1     // initial step size for successive search algorithm
                                     // temperature range covered from (TMIDDLE - TSTEP0) to (TMIDDLE + TSTEP0)
                                     // example: if TMIDDLE = 150 and TSTEP0 = 350
                                     // the covered temperature range is -200C to 500C
@@ -35,8 +35,11 @@
 // function declarations
 void max31865_init(void);
 float calcR(float);
-float readRTDtemp(float);
-float readRTDres(char);
+//float readRTDtemp(float);
+//float readRTDres(char);
+
+void getRTDtemp(char);              // reads MSB and LSB temperature registers through SPI
+void CalcRTDTemp(char);             // calculate temperature from SPI readout
 
 char spi_readreg(char, char);
 void spi_writereg(char, char, char);

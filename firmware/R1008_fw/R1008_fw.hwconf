@@ -67,10 +67,10 @@
     <property object="SMBUS_0" propertyId="smbus.timingandpincontrol.smbusswappins" value="SCL low pin, SDA high pin"/>
     <property object="SMBUS_0" propertyId="smbus.view.view" value="Advanced"/>
     <property object="SPI_0" propertyId="ABPeripheral.included" value="true"/>
-    <property object="SPI_0" propertyId="spi.clockrate.spiclockfrequencyactual" value="101.239 kHz"/>
-    <property object="SPI_0" propertyId="spi.clockrate.spiclockfrequencytarget" value="101239"/>
+    <property object="SPI_0" propertyId="spi.clockrate.spiclockfrequencyactual" value="1.225 MHz"/>
+    <property object="SPI_0" propertyId="spi.clockrate.spiclockfrequencytarget" value="1225000"/>
     <property object="SPI_0" propertyId="spi.clockrate.sysclk" value="24.500 MHz"/>
-    <property object="SPI_0" propertyId="spi.clockrate.sysclkdividercoefficientspi0ckr" value="120"/>
+    <property object="SPI_0" propertyId="spi.clockrate.sysclkdividercoefficientspi0ckr" value="9"/>
     <property object="SPI_0" propertyId="spi.configuration.clockphase" value="Data sample on second edge"/>
     <property object="SPI_0" propertyId="spi.configuration.clockpolarity" value="High in idle state"/>
     <property object="SPI_0" propertyId="spi.configuration.enablemastermode" value="Enable"/>

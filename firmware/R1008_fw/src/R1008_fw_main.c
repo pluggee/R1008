@@ -16,7 +16,7 @@
 // Global variables
 union temperature ch1temp;
 union temperature ch2temp;
-
+//
 union temperature ch1res;
 union temperature ch2res;
 
@@ -24,6 +24,11 @@ char ch1config;
 char ch2config;
 
 char faultstat;
+
+unsigned char rtdmsb1;
+unsigned char rtdmsb2;
+unsigned char rtdlsb1;
+unsigned char rtdlsb2;
 
 // Output pins
 SBIT(STAT, SFR_P2, 0);                                  // debug output used to measure timing
@@ -63,20 +68,31 @@ int main (void)
     STAT = 0;
 
 	while (1) 
-   {
+	{
 //	    Delay_ms(DELAYCALC);            // delay 100ms
-	    ch1config = spi_readreg(1, MAX31865_CONFIG);        // read config register CH1
-	    ch1res.f = readRTDres(1);
+
+	    getRTDtemp(1);
 	    STAT = 1;
-	    ch1temp.f = readRTDtemp(ch1res.f);                  // read and process CH1 PT100 temperature
+	    CalcRTDTemp(1);
 	    STAT = 0;
 
-	    ch2config = spi_readreg(2, MAX31865_CONFIG);        // read config register CH2
-	    ch2res.f = readRTDres(2);
-        ch2temp.f = readRTDtemp(ch2res.f);                  // read and process CH2 PT100 temperature
+	    getRTDtemp(2);
+	    CalcRTDTemp(2);
+
+//	    ch1config = spi_readreg(1, MAX31865_CONFIG);        // read config register CH1
+//	    ch1res.f = readRTDres(1);
+//	    STAT = 1;
+//	    ch1temp.f = readRTDtemp(ch1res.f);                  // read and process CH1 PT100 temperature
+//	    STAT = 0;
+//
+//	    ch2config = spi_readreg(2, MAX31865_CONFIG);        // read config register CH2
+//	    ch2res.f = readRTDres(2);
+//        ch2temp.f = readRTDtemp(ch2res.f);                  // read and process CH2 PT100 temperature
 
 	    // read and process CH2 PT100 temperature
 	    // read and process internal temperature sensor
 	    // check for any reconfigurations? execute reconfig and reset reconfigflag
-   }                             
+	}
+
+
 }

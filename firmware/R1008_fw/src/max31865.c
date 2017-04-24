@@ -31,9 +31,6 @@ SBIT(DRDY2B, SFR_P0, 7);                            // 2nd channel data ready   
 void Delay_us (U8 time_us);
 void Delay_ms (unsigned int time_ms);
 
-// variable instantiation
-char rtdmsb, rtdlsb;                  // 8-bit buffers for register values
-
 void max31865_init(void)
 {
     // this function initializes max31865 RTD to digital sensor
@@ -56,76 +53,76 @@ void max31865_init(void)
 }
 
 
-float readRTDtemp(float rtdres){
-    // This function reads the RTD temperature from the given SPI channel
-    // channel : SPI device
-
-    // local variables
-
-    float rcalc;                        // intermediate calculated value for successive search
-    float rtdtemp;                      // processed temperature value
-    float tmpstep;                      // step used for successive search algorithm
-    char i;                             // for loop variable
-
-    // Step3: calculate accurate temperature from resistor value
-    rtdtemp = TMIDDLE;                  // initial temperature value
-    tmpstep = TSTEP0;                   // initial step value
-
-    for (i=0;i<NITERATIONS;i++){
-        rcalc = calcR(rtdtemp);
-        if (rcalc > rtdres){
-            rtdtemp -= tmpstep;
-        }
-        else{
-            rtdtemp += tmpstep;
-        }
-        tmpstep = tmpstep/2;
-    }
-    return rtdtemp;                     // return processed temperature
-}
-
-float readRTDres(char channel){
-    // This function reads the RTD temperature from the given SPI channel
-    // channel : SPI device
-
-    // local variables
-
-    U16 rtdreg;                         // 16-bit calculation
-
-
-    spi_writereg(channel, MAX31865_CONFIG, 0x80);     // make sure bias is turned on
-    Delay_ms(5);
-    spi_writereg(channel, MAX31865_CONFIG, 0xA0);     // one shot conversion
-    // wait until valid data in registers
-    if (channel == 1){
-        while(DRDY1B);                              // wait until done
-    }
-    else{
-        while(DRDY2B);                              // wait until done
-    }
-
-    rtdmsb = spi_readreg(channel, MAX31865_RTDMSB);
-    rtdlsb = spi_readreg(channel, MAX31865_RTDLSB);
-
-    // detect faults
-    if (rtdlsb & 0x01){
-        if (channel == 1){
-            faultstat = faultstat | 0x01;
-        }
-        else{
-            faultstat = faultstat | 0x02;
-        }
-    }
-
-    // Step2: calculate PT100 resistance value
-    rtdreg = ((U16)rtdmsb << 8);        // Step2.1 : load MSB
-    rtdreg = rtdreg | rtdlsb;           // Step2.2 : load LSB and adjust
-    rtdreg = rtdreg >> 1;               // shift 1
-
-    return ((float)rtdreg * REFRES)/32768;     // return calculated PT100 resistance value
-}
-
-
+//float readRTDtemp(float rtdres){
+//    // This function reads the RTD temperature from the given SPI channel
+//    // channel : SPI device
+//
+//    // local variables
+//
+//    float rcalc;                        // intermediate calculated value for successive search
+//    float rtdtemp;                      // processed temperature value
+//    float tmpstep;                      // step used for successive search algorithm
+//    char i;                             // for loop variable
+//
+//    // Step3: calculate accurate temperature from resistor value
+//    rtdtemp = TMIDDLE;                  // initial temperature value
+//    tmpstep = TSTEP0;                   // initial step value
+//
+//    for (i=0;i<NITERATIONS;i++){
+//        rcalc = calcR(rtdtemp);
+//        if (rcalc > rtdres){
+//            rtdtemp -= tmpstep;
+//        }
+//        else{
+//            rtdtemp += tmpstep;
+//        }
+//        tmpstep = tmpstep/2;
+//    }
+//    return rtdtemp;                     // return processed temperature
+//}
+//
+//float readRTDres(char channel){
+//    // This function reads the RTD temperature from the given SPI channel
+//    // channel : SPI device
+//
+//    // local variables
+//
+//    U16 rtdreg;                         // 16-bit calculation
+//
+//
+//    spi_writereg(channel, MAX31865_CONFIG, 0x80);     // make sure bias is turned on
+//    Delay_ms(5);
+//    spi_writereg(channel, MAX31865_CONFIG, 0xA0);     // one shot conversion
+//    // wait until valid data in registers
+//    if (channel == 1){
+//        while(DRDY1B);                              // wait until done
+//    }
+//    else{
+//        while(DRDY2B);                              // wait until done
+//    }
+//
+//    rtdmsb = spi_readreg(channel, MAX31865_RTDMSB);
+//    rtdlsb = spi_readreg(channel, MAX31865_RTDLSB);
+//
+//    // detect faults
+//    if (rtdlsb & 0x01){
+//        if (channel == 1){
+//            faultstat = faultstat | 0x01;
+//        }
+//        else{
+//            faultstat = faultstat | 0x02;
+//        }
+//    }
+//
+//    // Step2: calculate PT100 resistance value
+//    rtdreg = ((U16)rtdmsb << 8);        // Step2.1 : load MSB
+//    rtdreg = rtdreg | rtdlsb;           // Step2.2 : load LSB and adjust
+//    rtdreg = rtdreg >> 1;               // shift 1
+//
+//    return ((float)rtdreg * REFRES)/32768;     // return calculated PT100 resistance value
+//}
+//
+//
 float calcR(float T){
     // This function calculates the resistance for a given temperature
 
@@ -136,12 +133,45 @@ float calcR(float T){
     //  -4.18301e-12 for -200 < T < 0
     //  0            for 0 <= T < 850
     // R(T) = R0(1 + aT + bT^2 + c(T - 100)T^3)
+
+
+//    float tt;
+//    float bb;
+//
+//    tt = 1;
+//    bb = 3.90830e-3*T;
+//    tt += bb;
+//    bb = 5.77500e-7*T;
+//    bb = bb*T;
+//    tt -= bb;
+//
+//    if (T < 0 ){
+//        bb = (T-100);
+//        bb = 4.18301e-12*bb;
+//        bb = bb*T;
+//        bb = bb*T;
+//        bb = bb*T;
+//        tt -= bb;
+//    }
+//
+//    return tt;
+
     if (T < 0){
-        return 100 * (1 + 3.90830e-3*T - 5.77500e-7*T*T - 4.18301e-12*(T-100)*T*T*T);
+        return 100.0 * (1 + 3.90830e-3*T - 5.77500e-7*T*T - 4.18301e-12*(T-100.0)*T*T*T);
     }
     else{
-        return 100 * (1 + 3.90830e-3*T - 5.77500e-7*T*T);
+        return 100.0 * (1 + 3.90830e-3*T - 5.77500e-7*T*T);
     }
+
+//    if (T < 0){
+//        return 100.0 * (1 + 3.9083*T/1000 - 5.77500*T*T/10000000 - 4.18301*(T-100.0)*T*T*T/1000000000000);
+//    }
+//    else{
+//        return 100.0 * (1 + 3.9083*T/1000 - 5.77500*T*T/10000000);
+//    }
+
+
+//    return 100 * (1 + 3.90830e-3*T - 5.77500e-7*T*T);
 }
 
 //-----------------------------------------------------------------------------
@@ -238,3 +268,143 @@ void spi_writereg(char channel, char address, char value){
     Delay_us (10);                      // Step1.10: CS hold time
 }
 
+void getRTDtemp (char channel){
+    spi_writereg(channel, MAX31865_CONFIG, 0x80);     // make sure bias is turned on
+    Delay_ms(5);
+    spi_writereg(channel, MAX31865_CONFIG, 0xA0);     // one shot conversion
+
+    if (channel == 2){
+        while(DRDY2B);
+    }
+    else{
+        while(DRDY1B);                              // wait until done
+    }
+
+    // reads RTD resistor MSB and LSB registers from SPI
+    if (channel == 2){                  // Step1.1: Activate Slave Select
+        CS2B = 0;
+    }
+    else{
+        CS1B = 0;
+    }
+    Delay_us (1);                       // Step1.2 : Wait 1 us, CS setup time
+    SPI0DAT = MAX31865_RTDMSB;          // Step1.3 : Send register address for read
+    while(!SPI0CN0_SPIF);               // Step1.4 : Wait for end of transfer
+    SPI0CN0_SPIF = 0;                   // Step1.5 : Clear the SPI intr. flag
+
+    SPI0DAT = 0;                        // Step1.6 : Dummy write to output serial clock
+    while(!SPI0CN0_SPIF);               // Step1.7 : Wait for end of transfer
+    SPI0CN0_SPIF = 0;                   // Step1.8 : Clear the SPI intr. flag
+
+    if (channel == 2){
+        rtdmsb2 = SPI0DAT;
+    }
+    else{
+        rtdmsb1 = SPI0DAT;
+    }
+
+    SPI0DAT = 0;                        // Step1.6 : Dummy write to output serial clock
+    while(!SPI0CN0_SPIF);               // Step1.7 : Wait for end of transfer
+    SPI0CN0_SPIF = 0;                   // Step1.8 : Clear the SPI intr. flag
+
+    if (channel == 2){
+        rtdlsb2 = SPI0DAT;
+    }
+    else{
+        rtdlsb1 = SPI0DAT;
+    }
+
+    CS1B = 1;                           // Step1.9 : Deactivate Slave Select
+    CS2B = 1;
+
+    Delay_us (10);                      // Step1.10: CS hold time
+}
+
+void CalcRTDTemp(char channel){
+    // This computes the temperature from respective rtdlsb/rtdmsb variables
+    // and assign them to chXtemp variables
+    unsigned int rtdreg;
+    float resval;
+    float rtdtemp;
+    float tmpstep;
+    float rcalc;
+    char i;
+
+//    if (channel == 2){
+//        rtdreg = rtdmsb2 & 0xFF;
+//        rtdreg = (rtdreg << 8) & 0xFF00;
+//        rtdreg = rtdreg | rtdlsb2;
+//        rtdreg = rtdreg >> 1;               // shift 1-bit to right
+//
+//        rtdmsb = rtdmsb2;
+//        rtdlsb = rtdlsb2;
+//    }
+//    else{
+//        rtdreg = rtdmsb1 & 0xFF;
+//        rtdreg = (rtdreg << 8) & 0xFF00;
+//        rtdreg = rtdreg | rtdlsb1;
+//        rtdreg = rtdreg >> 1;               // shift 1-bit to right
+//
+//        rtdmsb = rtdmsb1;
+//        rtdlsb = rtdlsb1;
+//    }
+//    rtdreg = rtdreg & 0x7FFF;                 // mask any ones from shifting right
+
+    if (channel == 2){
+        rtdreg = ((unsigned int)rtdmsb2 << 8);       // load MSB
+        rtdreg = rtdreg | rtdlsb2;          // load LSB and adjust
+        rtdreg = rtdreg >> 1;               // shift 1-bit to right
+    }
+    else{
+        rtdreg = ((unsigned int)rtdmsb1 << 8);       // load MSB
+        rtdreg = rtdreg | rtdlsb1;          // load LSB and adjust
+        rtdreg = rtdreg >> 1;               // shift 1-bit to right
+    }
+
+//    if (channel == 2){
+//        rtdreg = 127*(float)rtdmsb2 + (float)(rtdlsb2 >> 1);
+//    }
+//    else{
+//        rtdreg = 127*(float)rtdmsb1 + (float)(rtdlsb1 >> 1);
+//    }
+
+
+//    resval = (float)rtdreg;
+
+//    resval = ((float)rtdreg * REFRES)*3.05176E-05;     // return calculated PT100 resistance value
+
+    resval = ((float)rtdreg * REFRES)/32768;     // return calculated PT100 resistance value
+//    resval = (rtdreg * REFRES)/32768;     // return calculated PT100 resistance value
+
+//    resval = (float)rtdreg * REFRES/32768.0;     // return calculated PT100 resistance value
+
+//    resval = rtdreg * 0.01226806640625;     // return calculated PT100 resistance value
+
+    if (channel == 2){
+        ch2res.f = resval;
+    }
+    else{
+        ch1res.f = resval;
+    }
+
+    rtdtemp = TMIDDLE;                  // initial temperature value
+    tmpstep = TSTEP0;                   // initial step value
+
+    for (i=0;i<NITERATIONS;i++){
+        rcalc = calcR(rtdtemp);
+        if (rcalc > resval){
+            rtdtemp = rtdtemp - tmpstep;
+        }
+        else if (rcalc < resval){
+            rtdtemp = rtdtemp + tmpstep;
+        }
+        tmpstep = tmpstep/2.0;
+    }
+
+    if (channel == 2){
+        ch2temp.f = rtdtemp;
+    }
+    else{
+        ch1temp.f = rtdtemp;
+    }
+}

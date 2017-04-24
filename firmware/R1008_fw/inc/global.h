@@ -14,7 +14,7 @@
 #define SYSCLK      24500000    // Internal oscillator frequency in Hz
 #define PLATFORM    0x01        // platform ID, 0x01 for R1000A
 #define DEVID       0x08        // device ID, 0x08 for R1008 stepper motor driver
-#define DELAYCALC   200         // delay between calculations
+#define DELAYCALC   100         // delay between calculations
 
 //-----------------------------------------------------------------------------
 // Global VARIABLES
@@ -29,9 +29,14 @@ union temperature {
 
 extern union temperature ch1temp;       // channel 1 PT100 temperature
 extern union temperature ch2temp;       // channel 2 PT100 temperature
-
+//
 extern union temperature ch1res;        // channel 1 PT100 resistance
 extern union temperature ch2res;        // channel 2 PT100 resistance
+
+extern unsigned char rtdmsb1;
+extern unsigned char rtdmsb2;
+extern unsigned char rtdlsb1;
+extern unsigned char rtdlsb2;
 
 extern char ch1config;                  // value of config registers
 extern char ch2config;                  // value of config registers
