@@ -39,90 +39,18 @@ void max31865_init(void)
 
     // Write to CONFIG register for both channels
     // (D7) Set to 1: turn on VBIAS
-    // (D6) Set to 1: select automatic conversion mode, rate follows the filter mode 50Hz/60Hz
+    // (D6) Set to 0: select one shot conversion mode
     // (D5) Set to 0: not using single shot conversion
     // (D4) Set to 0: the default PT100 to 4 wire
     // (D3:D2) Set to 00: no manual fault detection action
     // (D1) Set to 0: do not clear fault register
     // (D0) Set to 0: filter at 60Hz
-//    spi_writereg(1, MAX31865_CONFIG, 0xC0);
-//    spi_writereg(2, MAX31865_CONFIG, 0xC0);
+    // therefore CONFIG_VAL = 0x80
 
-    spi_writereg(1, MAX31865_CONFIG, 0x80);
-    spi_writereg(2, MAX31865_CONFIG, 0x80);
+    spi_writereg(1, MAX31865_CONFIG, CONFIG_VAL);
+    spi_writereg(2, MAX31865_CONFIG, CONFIG_VAL);
 }
 
-
-//float readRTDtemp(float rtdres){
-//    // This function reads the RTD temperature from the given SPI channel
-//    // channel : SPI device
-//
-//    // local variables
-//
-//    float rcalc;                        // intermediate calculated value for successive search
-//    float rtdtemp;                      // processed temperature value
-//    float tmpstep;                      // step used for successive search algorithm
-//    char i;                             // for loop variable
-//
-//    // Step3: calculate accurate temperature from resistor value
-//    rtdtemp = TMIDDLE;                  // initial temperature value
-//    tmpstep = TSTEP0;                   // initial step value
-//
-//    for (i=0;i<NITERATIONS;i++){
-//        rcalc = calcR(rtdtemp);
-//        if (rcalc > rtdres){
-//            rtdtemp -= tmpstep;
-//        }
-//        else{
-//            rtdtemp += tmpstep;
-//        }
-//        tmpstep = tmpstep/2;
-//    }
-//    return rtdtemp;                     // return processed temperature
-//}
-//
-//float readRTDres(char channel){
-//    // This function reads the RTD temperature from the given SPI channel
-//    // channel : SPI device
-//
-//    // local variables
-//
-//    U16 rtdreg;                         // 16-bit calculation
-//
-//
-//    spi_writereg(channel, MAX31865_CONFIG, 0x80);     // make sure bias is turned on
-//    Delay_ms(5);
-//    spi_writereg(channel, MAX31865_CONFIG, 0xA0);     // one shot conversion
-//    // wait until valid data in registers
-//    if (channel == 1){
-//        while(DRDY1B);                              // wait until done
-//    }
-//    else{
-//        while(DRDY2B);                              // wait until done
-//    }
-//
-//    rtdmsb = spi_readreg(channel, MAX31865_RTDMSB);
-//    rtdlsb = spi_readreg(channel, MAX31865_RTDLSB);
-//
-//    // detect faults
-//    if (rtdlsb & 0x01){
-//        if (channel == 1){
-//            faultstat = faultstat | 0x01;
-//        }
-//        else{
-//            faultstat = faultstat | 0x02;
-//        }
-//    }
-//
-//    // Step2: calculate PT100 resistance value
-//    rtdreg = ((U16)rtdmsb << 8);        // Step2.1 : load MSB
-//    rtdreg = rtdreg | rtdlsb;           // Step2.2 : load LSB and adjust
-//    rtdreg = rtdreg >> 1;               // shift 1
-//
-//    return ((float)rtdreg * REFRES)/32768;     // return calculated PT100 resistance value
-//}
-//
-//
 float calcR(float T){
     // This function calculates the resistance for a given temperature
 
@@ -134,28 +62,6 @@ float calcR(float T){
     //  0            for 0 <= T < 850
     // R(T) = R0(1 + aT + bT^2 + c(T - 100)T^3)
 
-
-//    float tt;
-//    float bb;
-//
-//    tt = 1;
-//    bb = 3.90830e-3*T;
-//    tt += bb;
-//    bb = 5.77500e-7*T;
-//    bb = bb*T;
-//    tt -= bb;
-//
-//    if (T < 0 ){
-//        bb = (T-100);
-//        bb = 4.18301e-12*bb;
-//        bb = bb*T;
-//        bb = bb*T;
-//        bb = bb*T;
-//        tt -= bb;
-//    }
-//
-//    return tt;
-
     if (T < 0){
         return 100.0 * (1 + 3.90830e-3*T - 5.77500e-7*T*T - 4.18301e-12*(T-100.0)*T*T*T);
     }
@@ -163,15 +69,6 @@ float calcR(float T){
         return 100.0 * (1 + 3.90830e-3*T - 5.77500e-7*T*T);
     }
 
-//    if (T < 0){
-//        return 100.0 * (1 + 3.9083*T/1000 - 5.77500*T*T/10000000 - 4.18301*(T-100.0)*T*T*T/1000000000000);
-//    }
-//    else{
-//        return 100.0 * (1 + 3.9083*T/1000 - 5.77500*T*T/10000000);
-//    }
-
-
-//    return 100 * (1 + 3.90830e-3*T - 5.77500e-7*T*T);
 }
 
 //-----------------------------------------------------------------------------
@@ -269,9 +166,9 @@ void spi_writereg(char channel, char address, char value){
 }
 
 void getRTDtemp (char channel){
-    spi_writereg(channel, MAX31865_CONFIG, 0x80);     // make sure bias is turned on
+    spi_writereg(channel, MAX31865_CONFIG, CONFIG_VAL);     // make sure bias is turned on
     Delay_ms(5);
-    spi_writereg(channel, MAX31865_CONFIG, 0xA0);     // one shot conversion
+    spi_writereg(channel, MAX31865_CONFIG, CONFIG_VAL | 0x20);     // one shot conversion
 
     if (channel == 2){
         while(DRDY2B);
@@ -330,26 +227,6 @@ void CalcRTDTemp(char channel){
     float rcalc;
     char i;
 
-//    if (channel == 2){
-//        rtdreg = rtdmsb2 & 0xFF;
-//        rtdreg = (rtdreg << 8) & 0xFF00;
-//        rtdreg = rtdreg | rtdlsb2;
-//        rtdreg = rtdreg >> 1;               // shift 1-bit to right
-//
-//        rtdmsb = rtdmsb2;
-//        rtdlsb = rtdlsb2;
-//    }
-//    else{
-//        rtdreg = rtdmsb1 & 0xFF;
-//        rtdreg = (rtdreg << 8) & 0xFF00;
-//        rtdreg = rtdreg | rtdlsb1;
-//        rtdreg = rtdreg >> 1;               // shift 1-bit to right
-//
-//        rtdmsb = rtdmsb1;
-//        rtdlsb = rtdlsb1;
-//    }
-//    rtdreg = rtdreg & 0x7FFF;                 // mask any ones from shifting right
-
     if (channel == 2){
         rtdreg = ((unsigned int)rtdmsb2 << 8);       // load MSB
         rtdreg = rtdreg | rtdlsb2;          // load LSB and adjust
@@ -361,25 +238,9 @@ void CalcRTDTemp(char channel){
         rtdreg = rtdreg >> 1;               // shift 1-bit to right
     }
 
-//    if (channel == 2){
-//        rtdreg = 127*(float)rtdmsb2 + (float)(rtdlsb2 >> 1);
-//    }
-//    else{
-//        rtdreg = 127*(float)rtdmsb1 + (float)(rtdlsb1 >> 1);
-//    }
-
-
-//    resval = (float)rtdreg;
-
-//    resval = ((float)rtdreg * REFRES)*3.05176E-05;     // return calculated PT100 resistance value
-
     resval = ((float)rtdreg * REFRES)/32768;     // return calculated PT100 resistance value
-//    resval = (rtdreg * REFRES)/32768;     // return calculated PT100 resistance value
 
-//    resval = (float)rtdreg * REFRES/32768.0;     // return calculated PT100 resistance value
-
-//    resval = rtdreg * 0.01226806640625;     // return calculated PT100 resistance value
-
+    // store values in global variables (for I2C readout)
     if (channel == 2){
         ch2res.f = resval;
     }

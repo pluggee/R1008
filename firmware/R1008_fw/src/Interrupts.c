@@ -196,14 +196,6 @@ SI_INTERRUPT (SMBUS0_ISR, SMBUS0_IRQn)
         case TGT_CMD_BLSTAT:
             SMB_DATA_OUT[0] = 0x00;                         // indicating application mode
             break;
-//        case TGT_CMD_RTD1RES:
-//            SMB_DATA_OUT[0] = rtdmsb1;
-//            SMB_DATA_OUT[1] = rtdlsb1;
-//            break;
-//        case TGT_CMD_RTD2RES:
-//            SMB_DATA_OUT[0] = rtdmsb2;
-//            SMB_DATA_OUT[1] = rtdlsb2;
-//            break;
         case TGT_CMD_RTD1TEMP:
             SMB_DATA_OUT[0] = ch1temp.c[0];
             SMB_DATA_OUT[1] = ch1temp.c[1];
@@ -228,26 +220,6 @@ SI_INTERRUPT (SMBUS0_ISR, SMBUS0_IRQn)
             SMB_DATA_OUT[2] = ch2res.c[2];
             SMB_DATA_OUT[3] = ch2res.c[3];
             break;
-        case 0x36:
-            SMB_DATA_OUT[0] = rtdmsb1;
-            SMB_DATA_OUT[1] = rtdlsb1;
-            break;
-        case 0x37:
-            SMB_DATA_OUT[0] = rtdmsb2;
-            SMB_DATA_OUT[1] = rtdlsb2;
-            break;
-//        case TGT_CMD_CH1CFG:
-////            if (writelen > 1){
-////                // this is a write command, transfer
-////            }
-//            SMB_DATA_OUT[0] = ch1config;
-//            break;
-//        case TGT_CMD_CH2CFG:
-////            if (writelen > 1){
-////                // this is a write command, transfer
-////            }
-//            SMB_DATA_OUT[0] = ch2config;
-//            break;
         case TGT_CMD_RTDFAULT:
             // read out fault status
             SMB_DATA_OUT[0] = faultstat;

@@ -69,30 +69,17 @@ int main (void)
 
 	while (1) 
 	{
-//	    Delay_ms(DELAYCALC);            // delay 100ms
-
+	    // every calculation takes around 50ms
 	    getRTDtemp(1);
-	    STAT = 1;
+	    STAT = 1;                       // this is to measure the time it takes for floating point calc
 	    CalcRTDTemp(1);
 	    STAT = 0;
 
 	    getRTDtemp(2);
 	    CalcRTDTemp(2);
 
-//	    ch1config = spi_readreg(1, MAX31865_CONFIG);        // read config register CH1
-//	    ch1res.f = readRTDres(1);
-//	    STAT = 1;
-//	    ch1temp.f = readRTDtemp(ch1res.f);                  // read and process CH1 PT100 temperature
-//	    STAT = 0;
-//
-//	    ch2config = spi_readreg(2, MAX31865_CONFIG);        // read config register CH2
-//	    ch2res.f = readRTDres(2);
-//        ch2temp.f = readRTDtemp(ch2res.f);                  // read and process CH2 PT100 temperature
-
-	    // read and process CH2 PT100 temperature
+	    //FIXME - add code to measure die temperature
 	    // read and process internal temperature sensor
 	    // check for any reconfigurations? execute reconfig and reset reconfigflag
 	}
-
-
 }

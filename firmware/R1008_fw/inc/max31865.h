@@ -24,6 +24,9 @@
 // Board components
 #define REFRES              402.0   // reference resistor value (note .0 at the end)
 
+// Configuration
+#define CONFIG_VAL          0x80    // this is the default config for one-shot/60Hz filter
+
 // Algorithm constants
 #define NITERATIONS         20      // number of search iterations
 #define TMIDDLE             150.1     // initial temperature for PT100 successive search algorithm
