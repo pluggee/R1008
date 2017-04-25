@@ -9,6 +9,7 @@
 #include "i2c.h"
 #include "global.h"
 #include "InfoBlock.h"
+#include "adctemp.h"
 
 // $[Generated Includes]
 // [Generated Includes]$
@@ -71,15 +72,16 @@ int main (void)
 	{
 	    // every calculation takes around 50ms
 	    getRTDtemp(1);
-	    STAT = 1;                       // this is to measure the time it takes for floating point calc
 	    CalcRTDTemp(1);
-	    STAT = 0;
 
 	    getRTDtemp(2);
 	    CalcRTDTemp(2);
 
-	    //FIXME - add code to measure die temperature
-	    // read and process internal temperature sensor
+        STAT = 1;                       // this is to measure the time it takes for floating point calc
+	    calcInternalTemp();
+        STAT = 0;
+
 	    // check for any reconfigurations? execute reconfig and reset reconfigflag
+        //FIXME add code to reconfigure in case user wants to change notch filter to 50Hz on the fly
 	}
 }

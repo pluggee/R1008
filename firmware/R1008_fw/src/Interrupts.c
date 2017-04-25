@@ -15,35 +15,10 @@
 #include "InfoBlock.h"
 #include "max31865.h"
 
-uint32_t ADC_SUM;                           // Accumulates the ADC samples
-//bit CONV_COMPLETE;                        // ADC accumulated result ready flag
-char temp_val;
-//char TSUM[4];                               // bytes of ADC SUM
-//char TADCH, TADCL;                          // bytes for single ADC read
 
-unsigned char Timer2Count;       // counter for multiples of timer2
-unsigned short vdd_val; // value of VDD from 12-bit ADC measurement @ 2.4V (0.5X)
 
 char writelen = 0;
 
-// temperature sensor constants
-#define DS_SLOPE				0.00285		// slope from datasheet in V/C
-#define DS_OFFSET				0.757		// offset from datasheet in V
-// LSBSize = 1.65V/(2^12) = 0.000402V
-
-// For 16 samples
-//#define SAMPLING_2N             4			// number of samples (power of 2)
-//#define SAMPLING_NUMBER         16			// = 2^SAMPLING_2N
-//#define TSLOPE                	113			// slope LSB's/C = round(SAMPLING_NUMBER*DS_SLOPE/LSBSize)
-//#define TOFFSET                 30067		// Offset in LSB's = round(SAMPLING_NUMBER*DS_OFFSET/LSBSize)
-
-// For a single sample
-//#define SAMPLING_2N             0           // number of samples (power of 2)
-//#define SAMPLING_NUMBER         1          // = 2^SAMPLING_2N
-#define TSLOPE                  7         // slope LSB's/C = round(SAMPLING_NUMBER*DS_SLOPE/LSBSize)
-#define TOFFSET                 30067       // Offset in LSB's = round(SAMPLING_NUMBER*DS_OFFSET/LSBSize)
-// pin declarations
-//SBIT(PWMREF, SFR_P1, 4);            						// Driver mode2 pin
 
 //-----------------------------------------------------------------------------
 // TIMER0_ISR
@@ -191,7 +166,7 @@ SI_INTERRUPT (SMBUS0_ISR, SMBUS0_IRQn)
             break;
         case TGT_CMD_TMP:
             // This reads out the temperature value
-            SMB_DATA_OUT[0] = temp_val;
+            SMB_DATA_OUT[0] = temp_internal;
             break;
         case TGT_CMD_BLSTAT:
             SMB_DATA_OUT[0] = 0x00;                         // indicating application mode

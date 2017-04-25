@@ -6,9 +6,9 @@
     <property object="ADC_0" propertyId="adc.accumulatorconfiguration.repeatcount" value="4 conversions"/>
     <property object="ADC_0" propertyId="adc.configuration.gaincontrol" value="1x gain"/>
     <property object="ADC_0" propertyId="adc.configuration.resolution" value="12-bit"/>
-    <property object="ADC_0" propertyId="adc.configuration.sarclkactual" value="6.125 MHz"/>
-    <property object="ADC_0" propertyId="adc.configuration.sarclktarget" value="6125000"/>
-    <property object="ADC_0" propertyId="adc.configuration.sarclockdivider" value="3"/>
+    <property object="ADC_0" propertyId="adc.configuration.sarclkactual" value="790.322 kHz"/>
+    <property object="ADC_0" propertyId="adc.configuration.sarclktarget" value="800000"/>
+    <property object="ADC_0" propertyId="adc.configuration.sarclockdivider" value="30"/>
     <property object="ADC_0" propertyId="adc.configuration.sarclocksource" value="24.500 MHz"/>
     <property object="ADC_0" propertyId="adc.configuration.sysclk" value="24.500 MHz"/>
     <property object="ADC_0" propertyId="adc.control.enableadc" value="Enabled"/>

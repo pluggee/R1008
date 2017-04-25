@@ -406,13 +406,13 @@ extern void ADC_0_enter_DefaultMode_from_RESET(void) {
 
     // $[ADC0CF - ADC0 Configuration]
     /*
-     // SAR Clock Divider = 0x03
+     // SAR Clock Divider = 0x1E
      // ADC0 operates in 10-bit or 12-bit mode 
      // The on-chip PGA gain is 1
      // Normal Track Mode. When ADC0 is enabled, conversion begins immediately
      //     following the start-of-conversion signal
      */
-    ADC0CF = (0x03 << ADC0CF_ADSC__SHIFT) | ADC0CF_AD8BE__NORMAL
+    ADC0CF = (0x1E << ADC0CF_ADSC__SHIFT) | ADC0CF_AD8BE__NORMAL
             | ADC0CF_ADGN__GAIN_1 | ADC0CF_ADTM__TRACK_NORMAL;
     // [ADC0CF - ADC0 Configuration]$
 

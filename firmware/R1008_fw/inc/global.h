@@ -43,6 +43,8 @@ extern char ch2config;                  // value of config registers
 
 extern char faultstat;                  // stores fault status, B0 (CH1 fault), B1 (CH2 fault)
 
+extern char temp_internal;              // internal die temperature
+
 // I2C REGISTER/COMMAND Definitions
 // ---------------------------------
 #define TGT_CMD_RESET_MCU           0x00
