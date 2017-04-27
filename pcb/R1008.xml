@@ -2,8 +2,8 @@
 <export version="D">
   <design>
     <source>/home/sherif/git/R1008/pcb/R1008.sch</source>
-    <date>Wed 11 Jan 2017 12:23:59 AM PST</date>
-    <tool>Eeschema 4.0.3+e1-6302~38~ubuntu14.04.1-stable</tool>
+    <date>Thu 27 Apr 2017 12:30:37 PM PDT</date>
+    <tool>Eeschema 4.0.6-e0-6349~53~ubuntu14.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title/>
@@ -68,7 +68,7 @@
     </comp>
     <comp ref="J3">
       <value>SOCKET254P-01X04-1725672</value>
-      <footprint>Main:SOCKET254P-01X04-1725672</footprint>
+      <footprint>Main:70553-0038</footprint>
       <fields>
         <field name="Manufacturer">Phoenix Contact</field>
         <field name="MPN">1725672</field>
@@ -80,31 +80,47 @@
     </comp>
     <comp ref="J4">
       <value>CONN_01X03</value>
-      <footprint>Main:SOCKET254P-01X03</footprint>
+      <footprint>Main:CONN254P-01X03</footprint>
       <fields>
-        <field name="Manufacturer">TE Connectivity AMP Connectors</field>
-        <field name="MPN">3-644456-3</field>
+        <field name="Manufacturer">Amphenol FCI</field>
+        <field name="MPN">68001-403HLF</field>
         <field name="SKU">STUFF</field>
       </fields>
       <libsource lib="connect" part="CONN_01X03"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>584FB7FA</tstamp>
     </comp>
-    <comp ref="J5">
-      <value>CONN_01X04</value>
-      <footprint>Main:SOCKET254P-01X04</footprint>
-      <fields>
-        <field name="Manufacturer">TE Connectivity AMP Connectors</field>
-        <field name="MPN">3-644456-4</field>
-        <field name="SKU">STUFF</field>
-      </fields>
-      <libsource lib="connect" part="CONN_01X04"/>
+    <comp ref="TP2">
+      <value>TestPoint</value>
+      <footprint>Main:TestPoint000</footprint>
+      <libsource lib="electromechanical" part="TestPoint"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>584FED99</tstamp>
+      <tstamp>58ED9B81</tstamp>
+    </comp>
+    <comp ref="TP1">
+      <value>TestPoint</value>
+      <footprint>Main:TestPoint000</footprint>
+      <libsource lib="electromechanical" part="TestPoint"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58ED9C83</tstamp>
+    </comp>
+    <comp ref="TP4">
+      <value>TestPoint</value>
+      <footprint>Main:TestPoint000</footprint>
+      <libsource lib="electromechanical" part="TestPoint"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58EDA55C</tstamp>
+    </comp>
+    <comp ref="TP3">
+      <value>TestPoint</value>
+      <footprint>Main:TestPoint000</footprint>
+      <libsource lib="electromechanical" part="TestPoint"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58EDA685</tstamp>
     </comp>
     <comp ref="J2">
       <value>SOCKET254P-01X04-1725672</value>
-      <footprint>Main:SOCKET254P-01X04-1725672</footprint>
+      <footprint>Main:70553-0038</footprint>
       <fields>
         <field name="Manufacturer">Phoenix Contact</field>
         <field name="MPN">1725672</field>
@@ -112,318 +128,394 @@
       </fields>
       <libsource lib="connect" part="SOCKET254P-01X04-1725672"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>584FF48E</tstamp>
+      <tstamp>58EDC68D</tstamp>
+    </comp>
+    <comp ref="C7">
+      <value>CC0603KRX7R9BB104</value>
+      <footprint>Main:CAPC0603</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">CC0603KRX7R9BB104</field>
+        <field name="SKU">STUFF</field>
+        <field name="C">100 nF</field>
+        <field name="Tol">±10%</field>
+        <field name="Vmax">50.0V</field>
+        <field name="Type">X7R</field>
+      </fields>
+      <libsource lib="cap_smd" part="CC0603KRX7R9BB104"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58F701A1</tstamp>
+    </comp>
+    <comp ref="C6">
+      <value>CC0603KRX7R9BB104</value>
+      <footprint>Main:CAPC0603</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">CC0603KRX7R9BB104</field>
+        <field name="SKU">STUFF</field>
+        <field name="C">100 nF</field>
+        <field name="Tol">±10%</field>
+        <field name="Vmax">50.0V</field>
+        <field name="Type">X7R</field>
+      </fields>
+      <libsource lib="cap_smd" part="CC0603KRX7R9BB104"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58F70460</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>CC0603KRX7R9BB104</value>
+      <footprint>Main:CAPC0603</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">CC0603KRX7R9BB104</field>
+        <field name="SKU">STUFF</field>
+        <field name="C">100 nF</field>
+        <field name="Tol">±10%</field>
+        <field name="Vmax">50.0V</field>
+        <field name="Type">X7R</field>
+      </fields>
+      <libsource lib="cap_smd" part="CC0603KRX7R9BB104"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58F707B6</tstamp>
+    </comp>
+    <comp ref="TP5">
+      <value>TestPoint</value>
+      <footprint>Main:TestPoint000</footprint>
+      <libsource lib="electromechanical" part="TestPoint"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58FFC422</tstamp>
+    </comp>
+    <comp ref="TP7">
+      <value>TestPoint</value>
+      <footprint>Main:TestPoint000</footprint>
+      <libsource lib="electromechanical" part="TestPoint"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58FFCEA4</tstamp>
+    </comp>
+    <comp ref="TP9">
+      <value>TestPoint</value>
+      <footprint>Main:TestPoint000</footprint>
+      <libsource lib="electromechanical" part="TestPoint"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58FFD6C5</tstamp>
+    </comp>
+    <comp ref="TP6">
+      <value>TestPoint</value>
+      <footprint>Main:TestPoint000</footprint>
+      <libsource lib="electromechanical" part="TestPoint"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58FFDE4E</tstamp>
+    </comp>
+    <comp ref="TP8">
+      <value>TestPoint</value>
+      <footprint>Main:TestPoint000</footprint>
+      <libsource lib="electromechanical" part="TestPoint"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58FFE1D2</tstamp>
+    </comp>
+    <comp ref="TP10">
+      <value>TestPoint</value>
+      <footprint>Main:TestPoint000</footprint>
+      <libsource lib="electromechanical" part="TestPoint"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58FFE264</tstamp>
+    </comp>
+    <comp ref="TP11">
+      <value>TestPoint</value>
+      <footprint>Main:TestPoint000</footprint>
+      <libsource lib="electromechanical" part="TestPoint"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58FFE2FB</tstamp>
+    </comp>
+    <comp ref="A1">
+      <value>ART</value>
+      <footprint>pluggee:pluggeeLabsIcon-13X7</footprint>
+      <libsource lib="systems" part="ART"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5900025A</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>RC0603FR-0710KL</value>
+      <footprint>Main:RESC0603</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="SKU">STUFF</field>
+        <field name="Res">10.0 kΩ</field>
+        <field name="Tol">±1%</field>
+        <field name="Pwr">100 mW</field>
+      </fields>
+      <libsource lib="res_smd" part="RC0603FR-0710KL"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58FFC87E</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>RC0603FR-0710KL</value>
+      <footprint>Main:RESC0603</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="SKU">STUFF</field>
+        <field name="Res">10.0 kΩ</field>
+        <field name="Tol">±1%</field>
+        <field name="Pwr">100 mW</field>
+      </fields>
+      <libsource lib="res_smd" part="RC0603FR-0710KL"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58FFD207</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>RC0603FR-071KL</value>
+      <footprint>Main:RESC0603</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-071KL</field>
+        <field name="SKU">STUFF</field>
+        <field name="Res">1.00 kΩ</field>
+        <field name="Tol">±1%</field>
+        <field name="Pwr">100 mW</field>
+      </fields>
+      <libsource lib="res_smd" part="RC0603FR-071KL"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58FFDBBA</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>RC0603FR-071KL</value>
+      <footprint>Main:RESC0603</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-071KL</field>
+        <field name="SKU">STUFF</field>
+        <field name="Res">1.00 kΩ</field>
+        <field name="Tol">±1%</field>
+        <field name="Pwr">100 mW</field>
+      </fields>
+      <libsource lib="res_smd" part="RC0603FR-071KL"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58FFE03D</tstamp>
+    </comp>
+    <comp ref="R11">
+      <value>RC0603FR-0710KL</value>
+      <footprint>Main:RESC0603</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="SKU">STUFF</field>
+        <field name="Res">10.0 kΩ</field>
+        <field name="Tol">±1%</field>
+        <field name="Pwr">100 mW</field>
+      </fields>
+      <libsource lib="res_smd" part="RC0603FR-0710KL"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>590005AD</tstamp>
+    </comp>
+    <comp ref="R12">
+      <value>RC0603FR-0710KL</value>
+      <footprint>Main:RESC0603</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="SKU">STUFF</field>
+        <field name="Res">10.0 kΩ</field>
+        <field name="Tol">±1%</field>
+        <field name="Pwr">100 mW</field>
+      </fields>
+      <libsource lib="res_smd" part="RC0603FR-0710KL"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59001456</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>RC0603FR-0710KL</value>
+      <footprint>Main:RESC0603</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="SKU">STUFF</field>
+        <field name="Res">10.0 kΩ</field>
+        <field name="Tol">±1%</field>
+        <field name="Pwr">100 mW</field>
+      </fields>
+      <libsource lib="res_smd" part="RC0603FR-0710KL"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59001FAD</tstamp>
+    </comp>
+    <comp ref="R6">
+      <value>RC0603FR-0710KL</value>
+      <footprint>Main:RESC0603</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="SKU">STUFF</field>
+        <field name="Res">10.0 kΩ</field>
+        <field name="Tol">±1%</field>
+        <field name="Pwr">100 mW</field>
+      </fields>
+      <libsource lib="res_smd" part="RC0603FR-0710KL"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>590046D7</tstamp>
+    </comp>
+    <comp ref="R7">
+      <value>RC0603FR-0710KL</value>
+      <footprint>Main:RESC0603</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="SKU">STUFF</field>
+        <field name="Res">10.0 kΩ</field>
+        <field name="Tol">±1%</field>
+        <field name="Pwr">100 mW</field>
+      </fields>
+      <libsource lib="res_smd" part="RC0603FR-0710KL"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59005488</tstamp>
+    </comp>
+    <comp ref="R8">
+      <value>RC0603FR-0710KL</value>
+      <footprint>Main:RESC0603</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="SKU">STUFF</field>
+        <field name="Res">10.0 kΩ</field>
+        <field name="Tol">±1%</field>
+        <field name="Pwr">100 mW</field>
+      </fields>
+      <libsource lib="res_smd" part="RC0603FR-0710KL"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>590059AE</tstamp>
+    </comp>
+    <comp ref="R10">
+      <value>RN732BTTD4000B25</value>
+      <footprint>Main:RESC1206</footprint>
+      <fields>
+        <field name="Manufacturer">KOA Speer</field>
+        <field name="MPN">RN732BTTD4000B25</field>
+        <field name="SKU">STUFF</field>
+        <field name="Res">400 Ω</field>
+        <field name="Tol">±0.1%</field>
+        <field name="Pwr">125 mW</field>
+      </fields>
+      <libsource lib="res_smd" part="RC0603FR-0710KL"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5900878F</tstamp>
+    </comp>
+    <comp ref="R9">
+      <value>RN732BTTD4000B25</value>
+      <footprint>Main:RESC1206</footprint>
+      <fields>
+        <field name="Manufacturer">KOA Speer</field>
+        <field name="MPN">RN732BTTD4000B25</field>
+        <field name="SKU">STUFF</field>
+        <field name="Res">400 Ω</field>
+        <field name="Tol">±0.1%</field>
+        <field name="Pwr">125 mW</field>
+      </fields>
+      <libsource lib="res_smd" part="RC0603FR-0710KL"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5900947F</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>CC0603KRX7R9BB104</value>
+      <footprint>Main:CAPC0603</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">CC0603KRX7R9BB104</field>
+        <field name="SKU">STUFF</field>
+        <field name="C">100 nF</field>
+        <field name="Tol">±10%</field>
+        <field name="Vmax">50.0V</field>
+        <field name="Type">X7R</field>
+      </fields>
+      <libsource lib="cap_smd" part="CC0603KRX7R9BB104"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59024C3D</tstamp>
+    </comp>
+    <comp ref="C3">
+      <value>CC0603KRX7R9BB104</value>
+      <footprint>Main:CAPC0603</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">CC0603KRX7R9BB104</field>
+        <field name="SKU">STUFF</field>
+        <field name="C">100 nF</field>
+        <field name="Tol">±10%</field>
+        <field name="Vmax">50.0V</field>
+        <field name="Type">X7R</field>
+      </fields>
+      <libsource lib="cap_smd" part="CC0603KRX7R9BB104"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59024FCB</tstamp>
+    </comp>
+    <comp ref="C5">
+      <value>CC0603KRX7R9BB104</value>
+      <footprint>Main:CAPC0603</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">CC0603KRX7R9BB104</field>
+        <field name="SKU">STUFF</field>
+        <field name="C">100 nF</field>
+        <field name="Tol">±10%</field>
+        <field name="Vmax">50.0V</field>
+        <field name="Type">X7R</field>
+      </fields>
+      <libsource lib="cap_smd" part="CC0603KRX7R9BB104"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59025352</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>CC0603KRX7R9BB104</value>
+      <footprint>Main:CAPC0603</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">CC0603KRX7R9BB104</field>
+        <field name="SKU">STUFF</field>
+        <field name="C">100 nF</field>
+        <field name="Tol">±10%</field>
+        <field name="Vmax">50.0V</field>
+        <field name="Type">X7R</field>
+      </fields>
+      <libsource lib="cap_smd" part="CC0603KRX7R9BB104"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59025D2B</tstamp>
     </comp>
     <comp ref="J6">
       <value>CONN_01X03</value>
-      <footprint>Main:SOCKET254P-01X03</footprint>
+      <footprint>Main:CONN254P-01X03</footprint>
       <fields>
-        <field name="Manufacturer">TE Connectivity AMP Connectors</field>
-        <field name="MPN">3-644456-3</field>
+        <field name="Manufacturer">Amphenol FCI</field>
+        <field name="MPN">68001-403HLF</field>
         <field name="SKU">STUFF</field>
       </fields>
       <libsource lib="connect" part="CONN_01X03"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>584FF497</tstamp>
-    </comp>
-    <comp ref="J7">
-      <value>CONN_01X04</value>
-      <footprint>Main:SOCKET254P-01X04</footprint>
-      <fields>
-        <field name="Manufacturer">TE Connectivity AMP Connectors</field>
-        <field name="MPN">3-644456-4</field>
-        <field name="SKU">STUFF</field>
-      </fields>
-      <libsource lib="connect" part="CONN_01X04"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>584FF4BD</tstamp>
-    </comp>
-    <comp ref="C6">
-      <value>C0603</value>
-      <footprint>Main:CAPC0603</footprint>
-      <fields>
-        <field name="C">10nF</field>
-        <field name="TC">X5R</field>
-        <field name="Vmax">16V</field>
-        <field name="Tol">10%</field>
-        <field name="SKU">STUFF</field>
-      </fields>
-      <libsource lib="devices" part="C0603"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>58504055</tstamp>
-    </comp>
-    <comp ref="C7">
-      <value>C0603</value>
-      <footprint>Main:CAPC0603</footprint>
-      <fields>
-        <field name="C">10nF</field>
-        <field name="TC">X5R</field>
-        <field name="Vmax">16V</field>
-        <field name="Tol">10%</field>
-        <field name="SKU">STUFF</field>
-      </fields>
-      <libsource lib="devices" part="C0603"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>585048C0</tstamp>
-    </comp>
-    <comp ref="R9">
-      <value>R1206</value>
-      <footprint>Main:RESC1206</footprint>
-      <fields>
-        <field name="Pwr">62.5mW</field>
-        <field name="Res">400</field>
-        <field name="Tol">0.1%</field>
-        <field name="SKU">STUFF</field>
-      </fields>
-      <libsource lib="devices" part="R1206"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>58509D8C</tstamp>
-    </comp>
-    <comp ref="R10">
-      <value>R1206</value>
-      <footprint>Main:RESC1206</footprint>
-      <fields>
-        <field name="Pwr">62.5mW</field>
-        <field name="Res">400</field>
-        <field name="Tol">0.1%</field>
-        <field name="SKU">STUFF</field>
-      </fields>
-      <libsource lib="devices" part="R1206"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5850A5AF</tstamp>
-    </comp>
-    <comp ref="C5">
-      <value>C0603</value>
-      <footprint>Main:CAPC0603</footprint>
-      <fields>
-        <field name="C">0.1uF</field>
-        <field name="TC">X5R</field>
-        <field name="Vmax">16V</field>
-        <field name="Tol">10%</field>
-        <field name="SKU">STUFF</field>
-      </fields>
-      <libsource lib="devices" part="C0603"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5850C542</tstamp>
-    </comp>
-    <comp ref="C3">
-      <value>C0603</value>
-      <footprint>Main:CAPC0603</footprint>
-      <fields>
-        <field name="C">0.1uF</field>
-        <field name="TC">X5R</field>
-        <field name="Vmax">16V</field>
-        <field name="Tol">10%</field>
-        <field name="SKU">STUFF</field>
-      </fields>
-      <libsource lib="devices" part="C0603"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5850C832</tstamp>
-    </comp>
-    <comp ref="C4">
-      <value>C0603</value>
-      <footprint>Main:CAPC0603</footprint>
-      <fields>
-        <field name="C">0.1uF</field>
-        <field name="TC">X5R</field>
-        <field name="Vmax">16V</field>
-        <field name="Tol">10%</field>
-        <field name="SKU">STUFF</field>
-      </fields>
-      <libsource lib="devices" part="C0603"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>585108C7</tstamp>
-    </comp>
-    <comp ref="C2">
-      <value>C0603</value>
-      <footprint>Main:CAPC0603</footprint>
-      <fields>
-        <field name="C">0.1uF</field>
-        <field name="TC">X5R</field>
-        <field name="Vmax">16V</field>
-        <field name="Tol">10%</field>
-        <field name="SKU">STUFF</field>
-      </fields>
-      <libsource lib="devices" part="C0603"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>585108D2</tstamp>
-    </comp>
-    <comp ref="C1">
-      <value>C0603</value>
-      <footprint>Main:CAPC0603</footprint>
-      <fields>
-        <field name="C">0.1uF</field>
-        <field name="TC">X5R</field>
-        <field name="Vmax">16V</field>
-        <field name="Tol">10%</field>
-        <field name="SKU">STUFF</field>
-      </fields>
-      <libsource lib="devices" part="C0603"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>58515D9E</tstamp>
-    </comp>
-    <comp ref="R2">
-      <value>R0603</value>
-      <footprint>Main:RESC0603</footprint>
-      <fields>
-        <field name="Pwr">62.5mW</field>
-        <field name="Res">1k</field>
-        <field name="Tol">5%</field>
-        <field name="SKU">STUFF</field>
-      </fields>
-      <libsource lib="devices" part="R0603"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5851954D</tstamp>
-    </comp>
-    <comp ref="R3">
-      <value>R0603</value>
-      <footprint>Main:RESC0603</footprint>
-      <fields>
-        <field name="Pwr">62.5mW</field>
-        <field name="Res">1k</field>
-        <field name="Tol">5%</field>
-        <field name="SKU">STUFF</field>
-      </fields>
-      <libsource lib="devices" part="R0603"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>58519B69</tstamp>
-    </comp>
-    <comp ref="R4">
-      <value>R0603</value>
-      <footprint>Main:RESC0603</footprint>
-      <fields>
-        <field name="Pwr">62.5mW</field>
-        <field name="Res">10k</field>
-        <field name="Tol">5%</field>
-        <field name="SKU">STUFF</field>
-      </fields>
-      <libsource lib="devices" part="R0603"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5851A3EF</tstamp>
-    </comp>
-    <comp ref="R1">
-      <value>R0603</value>
-      <footprint>Main:RESC0603</footprint>
-      <fields>
-        <field name="Pwr">62.5mW</field>
-        <field name="Res">10k</field>
-        <field name="Tol">5%</field>
-        <field name="SKU">STUFF</field>
-      </fields>
-      <libsource lib="devices" part="R0603"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5851AD20</tstamp>
-    </comp>
-    <comp ref="R5">
-      <value>R0603</value>
-      <footprint>Main:RESC0603</footprint>
-      <fields>
-        <field name="Pwr">62.5mW</field>
-        <field name="Res">10k</field>
-        <field name="Tol">5%</field>
-        <field name="SKU">STUFF</field>
-      </fields>
-      <libsource lib="devices" part="R0603"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5852A83A</tstamp>
-    </comp>
-    <comp ref="R6">
-      <value>R0603</value>
-      <footprint>Main:RESC0603</footprint>
-      <fields>
-        <field name="Pwr">62.5mW</field>
-        <field name="Res">10k</field>
-        <field name="Tol">5%</field>
-        <field name="SKU">STUFF</field>
-      </fields>
-      <libsource lib="devices" part="R0603"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5852A8BF</tstamp>
-    </comp>
-    <comp ref="R7">
-      <value>R0603</value>
-      <footprint>Main:RESC0603</footprint>
-      <fields>
-        <field name="Pwr">62.5mW</field>
-        <field name="Res">10k</field>
-        <field name="Tol">5%</field>
-        <field name="SKU">STUFF</field>
-      </fields>
-      <libsource lib="devices" part="R0603"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5852AB58</tstamp>
-    </comp>
-    <comp ref="R8">
-      <value>R0603</value>
-      <footprint>Main:RESC0603</footprint>
-      <fields>
-        <field name="Pwr">62.5mW</field>
-        <field name="Res">10k</field>
-        <field name="Tol">5%</field>
-        <field name="SKU">STUFF</field>
-      </fields>
-      <libsource lib="devices" part="R0603"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5852AB69</tstamp>
-    </comp>
-    <comp ref="R12">
-      <value>R0603</value>
-      <footprint>Main:RESC0603</footprint>
-      <fields>
-        <field name="Pwr">62.5mW</field>
-        <field name="Res">10k</field>
-        <field name="Tol">5%</field>
-        <field name="SKU">STUFF</field>
-      </fields>
-      <libsource lib="devices" part="R0603"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>585302BE</tstamp>
-    </comp>
-    <comp ref="R11">
-      <value>R0603</value>
-      <footprint>Main:RESC0603</footprint>
-      <fields>
-        <field name="Pwr">62.5mW</field>
-        <field name="Res">10k</field>
-        <field name="Tol">5%</field>
-        <field name="SKU">STUFF</field>
-      </fields>
-      <libsource lib="devices" part="R0603"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>58530D7A</tstamp>
-    </comp>
-    <comp ref="J8">
-      <value>CONN_01X03</value>
-      <footprint>Main:SOCKET254P-01X03</footprint>
-      <fields>
-        <field name="Manufacturer">TE Connectivity AMP Connectors</field>
-        <field name="MPN">3-644456-3</field>
-        <field name="SKU">STUFF</field>
-      </fields>
-      <libsource lib="connect" part="CONN_01X03"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>58532ED2</tstamp>
+      <tstamp>59028325</tstamp>
     </comp>
   </components>
   <libparts>
-    <libpart lib="devices" part="C0603">
-      <description>Unpolarized capacitor</description>
+    <libpart lib="systems" part="ART">
+      <description>Misc artwork - assign footprint</description>
+      <fields>
+        <field name="Reference">A</field>
+        <field name="Value">ART</field>
+      </fields>
+    </libpart>
+    <libpart lib="cap_smd" part="CC0603KRX7R9BB104">
+      <description>100 nF 0603 X7R ±10% 50.0V</description>
       <footprints>
-        <fp>C?</fp>
-        <fp>C_????_*</fp>
-        <fp>C_????</fp>
-        <fp>SMD*_c</fp>
-        <fp>Capacitor*</fp>
+        <fp>Capacitor_*</fp>
+        <fp>C_*</fp>
       </footprints>
       <fields>
         <field name="Reference">C</field>
-        <field name="Value">C0603</field>
+        <field name="Value">CC0603KRX7R9BB104</field>
         <field name="Footprint">Main:CAPC0603</field>
-        <field name="C">10nF</field>
-        <field name="TC">X5R</field>
-        <field name="Vmax">16V</field>
-        <field name="Tol">10%</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">CC0603KRX7R9BB104</field>
         <field name="SKU">STUFF</field>
+        <field name="C">100 nF</field>
+        <field name="Tol">±10%</field>
+        <field name="Vmax">50.0V</field>
+        <field name="Type">X7R</field>
       </fields>
       <pins>
         <pin num="1" name="~" type="passive"/>
@@ -444,23 +536,6 @@
         <pin num="1" name="P1" type="passive"/>
         <pin num="2" name="P2" type="passive"/>
         <pin num="3" name="P3" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="connect" part="CONN_01X04">
-      <description>Connector 01x04</description>
-      <fields>
-        <field name="Reference">J</field>
-        <field name="Value">CONN_01X04</field>
-        <field name="Footprint">Main:SOCKET254P-01X04</field>
-        <field name="Manufacturer">TE Connectivity AMP Connectors</field>
-        <field name="MPN">3-644456-4</field>
-        <field name="SKU">STUFF</field>
-      </fields>
-      <pins>
-        <pin num="1" name="P1" type="passive"/>
-        <pin num="2" name="P2" type="passive"/>
-        <pin num="3" name="P3" type="passive"/>
-        <pin num="4" name="P4" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="microcontroller" part="EFM8BB10F2G">
@@ -581,40 +656,44 @@
         <pin num="B18" name="B18" type="BiDi"/>
       </pins>
     </libpart>
-    <libpart lib="devices" part="R0603">
-      <description>Resistor</description>
+    <libpart lib="res_smd" part="RC0603FR-0710KL">
+      <description>RES 0603 10.0 kΩ ±1%</description>
       <footprints>
         <fp>Resistor_*</fp>
         <fp>R_*</fp>
       </footprints>
       <fields>
         <field name="Reference">R</field>
-        <field name="Value">R0603</field>
+        <field name="Value">RC0603FR-0710KL</field>
         <field name="Footprint">Main:RESC0603</field>
-        <field name="Pwr">62.5mW</field>
-        <field name="Res">1k</field>
-        <field name="Tol">5%</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-0710KL</field>
         <field name="SKU">STUFF</field>
+        <field name="Res">10.0 kΩ</field>
+        <field name="Tol">±1%</field>
+        <field name="Pwr">100 mW</field>
       </fields>
       <pins>
         <pin num="1" name="~" type="passive"/>
         <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="devices" part="R1206">
-      <description>Resistor</description>
+    <libpart lib="res_smd" part="RC0603FR-071KL">
+      <description>RES 0603 1.00 kΩ ±1%</description>
       <footprints>
         <fp>Resistor_*</fp>
         <fp>R_*</fp>
       </footprints>
       <fields>
         <field name="Reference">R</field>
-        <field name="Value">R1206</field>
-        <field name="Footprint">Main:RESC1206</field>
-        <field name="Pwr">62.5mW</field>
-        <field name="Res">1k</field>
-        <field name="Tol">5%</field>
+        <field name="Value">RC0603FR-071KL</field>
+        <field name="Footprint">Main:RESC0603</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0603FR-071KL</field>
         <field name="SKU">STUFF</field>
+        <field name="Res">1.00 kΩ</field>
+        <field name="Tol">±1%</field>
+        <field name="Pwr">100 mW</field>
       </fields>
       <pins>
         <pin num="1" name="~" type="passive"/>
@@ -638,271 +717,290 @@
         <pin num="4" name="P4" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="electromechanical" part="TestPoint">
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">TestPoint</field>
+        <field name="Footprint">Main:TestPoint000</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="input"/>
+      </pins>
+    </libpart>
   </libparts>
   <libraries>
-    <library logical="analog">
-      <uri>/home/sherif/git/KiCADLibs/sch/analog.lib</uri>
-    </library>
     <library logical="connect">
       <uri>/home/sherif/git/KiCADLibs/sch/connect.lib</uri>
+    </library>
+    <library logical="systems">
+      <uri>/home/sherif/git/KiCADLibs/sch/systems.lib</uri>
     </library>
     <library logical="microcontroller">
       <uri>/home/sherif/git/KiCADLibs/sch/microcontroller.lib</uri>
     </library>
-    <library logical="devices">
-      <uri>/home/sherif/git/KiCADLibs/sch/devices.lib</uri>
+    <library logical="res_smd">
+      <uri>/home/sherif/git/KiCADLibs/sch/res_smd.lib</uri>
+    </library>
+    <library logical="analog">
+      <uri>/home/sherif/git/KiCADLibs/sch/analog.lib</uri>
+    </library>
+    <library logical="electromechanical">
+      <uri>/home/sherif/git/KiCADLibs/sch/electromechanical.lib</uri>
+    </library>
+    <library logical="cap_smd">
+      <uri>/home/sherif/git/KiCADLibs/sch/cap_smd.lib</uri>
     </library>
   </libraries>
   <nets>
-    <net code="1" name="SCLK_B">
-      <node ref="J1" pin="B17"/>
-    </net>
-    <net code="2" name="RESERVED0">
-      <node ref="J1" pin="B16"/>
-    </net>
-    <net code="3" name="HT">
-      <node ref="J1" pin="A1"/>
-      <node ref="J1" pin="A8"/>
-      <node ref="J1" pin="A2"/>
-      <node ref="J1" pin="A7"/>
-      <node ref="J1" pin="A6"/>
-      <node ref="J1" pin="A3"/>
-      <node ref="J1" pin="A4"/>
-      <node ref="J1" pin="A5"/>
-    </net>
-    <net code="4" name="GND">
-      <node ref="U2" pin="18"/>
-      <node ref="U2" pin="13"/>
-      <node ref="U2" pin="19"/>
-      <node ref="U1" pin="13"/>
-      <node ref="J8" pin="3"/>
-      <node ref="J1" pin="B8"/>
-      <node ref="C1" pin="2"/>
-      <node ref="J6" pin="3"/>
-      <node ref="C2" pin="2"/>
-      <node ref="C4" pin="2"/>
-      <node ref="J1" pin="B3"/>
-      <node ref="U4" pin="21"/>
-      <node ref="U4" pin="12"/>
-      <node ref="J1" pin="B1"/>
-      <node ref="J1" pin="B2"/>
-      <node ref="J1" pin="B4"/>
-      <node ref="J1" pin="B5"/>
-      <node ref="J1" pin="B6"/>
-      <node ref="J1" pin="B7"/>
-      <node ref="C3" pin="2"/>
-      <node ref="C5" pin="2"/>
-      <node ref="U4" pin="3"/>
-      <node ref="U1" pin="18"/>
-      <node ref="U1" pin="19"/>
-      <node ref="J4" pin="3"/>
-    </net>
-    <net code="5" name="C2D">
-      <node ref="R4" pin="1"/>
-      <node ref="J8" pin="2"/>
-      <node ref="U4" pin="6"/>
-      <node ref="R3" pin="1"/>
-    </net>
-    <net code="6" name="~MRESET">
-      <node ref="J8" pin="1"/>
-      <node ref="R1" pin="1"/>
-      <node ref="R2" pin="2"/>
-      <node ref="U4" pin="5"/>
-    </net>
-    <net code="7" name="+3V3">
-      <node ref="C1" pin="1"/>
-      <node ref="R5" pin="2"/>
-      <node ref="R4" pin="2"/>
-      <node ref="U2" pin="3"/>
-      <node ref="U1" pin="2"/>
-      <node ref="C5" pin="1"/>
-      <node ref="J1" pin="B9"/>
-      <node ref="J1" pin="B10"/>
-      <node ref="J1" pin="B11"/>
-      <node ref="U1" pin="3"/>
-      <node ref="R1" pin="2"/>
-      <node ref="U4" pin="4"/>
-      <node ref="U2" pin="2"/>
-      <node ref="R6" pin="2"/>
-      <node ref="R7" pin="2"/>
-      <node ref="C4" pin="1"/>
-      <node ref="R8" pin="2"/>
-      <node ref="R11" pin="2"/>
-      <node ref="R12" pin="2"/>
-      <node ref="C2" pin="1"/>
-      <node ref="C3" pin="1"/>
-    </net>
-    <net code="8" name="SDA">
-      <node ref="R11" pin="1"/>
-      <node ref="U4" pin="18"/>
-      <node ref="J1" pin="A17"/>
-    </net>
-    <net code="9" name="SCL">
-      <node ref="R12" pin="1"/>
-      <node ref="J1" pin="A16"/>
-      <node ref="U4" pin="19"/>
-    </net>
-    <net code="10" name="+5V">
-      <node ref="J1" pin="A9"/>
-      <node ref="J1" pin="A10"/>
-      <node ref="J1" pin="A11"/>
-    </net>
-    <net code="11" name="PX4">
-      <node ref="J1" pin="A15"/>
-    </net>
-    <net code="12" name="PX3">
-      <node ref="J1" pin="A14"/>
-    </net>
-    <net code="13" name="PX2">
-      <node ref="J1" pin="A13"/>
-    </net>
-    <net code="14" name="PX1">
-      <node ref="J1" pin="A12"/>
-    </net>
-    <net code="15" name="ID3">
-      <node ref="U4" pin="10"/>
-      <node ref="J1" pin="B15"/>
-      <node ref="R8" pin="1"/>
-    </net>
-    <net code="16" name="Net-(U4-Pad17)">
-      <node ref="U4" pin="17"/>
-    </net>
-    <net code="17" name="ID2">
-      <node ref="R7" pin="1"/>
-      <node ref="U4" pin="9"/>
-      <node ref="J1" pin="B14"/>
-    </net>
-    <net code="18" name="ID1">
-      <node ref="J1" pin="B13"/>
-      <node ref="U4" pin="8"/>
-      <node ref="R6" pin="1"/>
-    </net>
-    <net code="19" name="ID0">
-      <node ref="J1" pin="B12"/>
-      <node ref="U4" pin="7"/>
-      <node ref="R5" pin="1"/>
-    </net>
-    <net code="20" name="Net-(U4-Pad11)">
-      <node ref="U4" pin="11"/>
-    </net>
-    <net code="21" name="/R-_1">
-      <node ref="R9" pin="2"/>
-      <node ref="U1" pin="6"/>
-      <node ref="U1" pin="7"/>
-    </net>
-    <net code="22" name="/R+_1">
+    <net code="1" name="/R+_1">
       <node ref="R9" pin="1"/>
       <node ref="U1" pin="5"/>
       <node ref="U1" pin="4"/>
     </net>
-    <net code="23" name="/R+_2">
-      <node ref="U2" pin="4"/>
+    <net code="2" name="/R-_1">
+      <node ref="R9" pin="2"/>
+      <node ref="U1" pin="6"/>
+      <node ref="U1" pin="7"/>
+    </net>
+    <net code="3" name="/R+_2">
       <node ref="U2" pin="5"/>
       <node ref="R10" pin="1"/>
+      <node ref="U2" pin="4"/>
     </net>
-    <net code="24" name="/R-_2">
+    <net code="4" name="SCLK_B">
+      <node ref="J1" pin="B17"/>
+    </net>
+    <net code="5" name="RESERVED0">
+      <node ref="J1" pin="B16"/>
+    </net>
+    <net code="6" name="SDA">
+      <node ref="J1" pin="A17"/>
+      <node ref="U4" pin="18"/>
+      <node ref="R11" pin="1"/>
+    </net>
+    <net code="7" name="SCL">
+      <node ref="R12" pin="1"/>
+      <node ref="J1" pin="A16"/>
+      <node ref="U4" pin="19"/>
+    </net>
+    <net code="8" name="PX1">
+      <node ref="J1" pin="A12"/>
+    </net>
+    <net code="9" name="PX2">
+      <node ref="J1" pin="A13"/>
+    </net>
+    <net code="10" name="PX3">
+      <node ref="J1" pin="A14"/>
+    </net>
+    <net code="11" name="PX4">
+      <node ref="J1" pin="A15"/>
+    </net>
+    <net code="12" name="+5V">
+      <node ref="J1" pin="A9"/>
+      <node ref="J1" pin="A11"/>
+      <node ref="J1" pin="A10"/>
+    </net>
+    <net code="13" name="/R-_2">
+      <node ref="R10" pin="2"/>
       <node ref="U2" pin="7"/>
       <node ref="U2" pin="6"/>
-      <node ref="R10" pin="2"/>
     </net>
-    <net code="25" name="/MOSI">
-      <node ref="U2" pin="14"/>
-      <node ref="U4" pin="20"/>
-      <node ref="U1" pin="14"/>
+    <net code="14" name="ID0">
+      <node ref="U4" pin="7"/>
+      <node ref="J1" pin="B12"/>
+      <node ref="R5" pin="1"/>
     </net>
-    <net code="26" name="/~CS~1">
-      <node ref="U1" pin="16"/>
-      <node ref="U4" pin="14"/>
+    <net code="15" name="~MRESET">
+      <node ref="R2" pin="2"/>
+      <node ref="R1" pin="1"/>
+      <node ref="U4" pin="5"/>
+      <node ref="TP4" pin="1"/>
     </net>
-    <net code="27" name="/SCLK">
-      <node ref="U1" pin="15"/>
-      <node ref="U4" pin="2"/>
-      <node ref="U2" pin="15"/>
+    <net code="16" name="C2D">
+      <node ref="R3" pin="1"/>
+      <node ref="U4" pin="6"/>
+      <node ref="TP3" pin="1"/>
+      <node ref="R4" pin="1"/>
     </net>
-    <net code="28" name="/~DRDY~1">
-      <node ref="U1" pin="1"/>
-      <node ref="U4" pin="13"/>
+    <net code="17" name="GND">
+      <node ref="J1" pin="B3"/>
+      <node ref="J1" pin="B1"/>
+      <node ref="J1" pin="B4"/>
+      <node ref="J1" pin="B5"/>
+      <node ref="J1" pin="B6"/>
+      <node ref="U4" pin="12"/>
+      <node ref="U4" pin="21"/>
+      <node ref="J4" pin="3"/>
+      <node ref="U1" pin="13"/>
+      <node ref="U1" pin="18"/>
+      <node ref="U1" pin="19"/>
+      <node ref="U2" pin="19"/>
+      <node ref="U2" pin="18"/>
+      <node ref="U4" pin="3"/>
+      <node ref="U2" pin="13"/>
+      <node ref="TP2" pin="1"/>
+      <node ref="J1" pin="B2"/>
+      <node ref="J1" pin="B7"/>
+      <node ref="C4" pin="2"/>
+      <node ref="J1" pin="B8"/>
+      <node ref="C3" pin="2"/>
+      <node ref="C5" pin="2"/>
+      <node ref="C1" pin="2"/>
+      <node ref="C2" pin="2"/>
+      <node ref="J6" pin="3"/>
     </net>
-    <net code="29" name="/MISO">
-      <node ref="U1" pin="17"/>
-      <node ref="U4" pin="1"/>
-      <node ref="U2" pin="17"/>
+    <net code="18" name="ID3">
+      <node ref="R8" pin="1"/>
+      <node ref="U4" pin="10"/>
+      <node ref="J1" pin="B15"/>
     </net>
-    <net code="30" name="/~CS~2">
+    <net code="19" name="ID2">
+      <node ref="U4" pin="9"/>
+      <node ref="R7" pin="1"/>
+      <node ref="J1" pin="B14"/>
+    </net>
+    <net code="20" name="ID1">
+      <node ref="J1" pin="B13"/>
+      <node ref="R6" pin="1"/>
+      <node ref="U4" pin="8"/>
+    </net>
+    <net code="21" name="Net-(U4-Pad17)">
+      <node ref="U4" pin="17"/>
+    </net>
+    <net code="22" name="Net-(U4-Pad11)">
+      <node ref="U4" pin="11"/>
+    </net>
+    <net code="23" name="Net-(U2-Pad20)">
+      <node ref="U2" pin="20"/>
+    </net>
+    <net code="24" name="Net-(U1-Pad20)">
+      <node ref="U1" pin="20"/>
+    </net>
+    <net code="25" name="/FORCE+_1">
+      <node ref="U1" pin="8"/>
+      <node ref="J4" pin="1"/>
+      <node ref="J3" pin="4"/>
+    </net>
+    <net code="26" name="/RTDIN+_1">
+      <node ref="U1" pin="10"/>
+      <node ref="C6" pin="1"/>
+      <node ref="J3" pin="3"/>
+    </net>
+    <net code="27" name="/~CS~2">
       <node ref="U4" pin="16"/>
       <node ref="U2" pin="16"/>
+      <node ref="TP11" pin="1"/>
     </net>
-    <net code="31" name="/~DRDY~2">
+    <net code="28" name="/~DRDY~2">
+      <node ref="TP10" pin="1"/>
       <node ref="U4" pin="15"/>
       <node ref="U2" pin="1"/>
     </net>
-    <net code="32" name="Net-(U2-Pad20)">
-      <node ref="U2" pin="20"/>
+    <net code="29" name="/~CS~1">
+      <node ref="U4" pin="14"/>
+      <node ref="TP8" pin="1"/>
+      <node ref="U1" pin="16"/>
     </net>
-    <net code="33" name="Net-(U1-Pad20)">
-      <node ref="U1" pin="20"/>
+    <net code="30" name="/~DRDY~1">
+      <node ref="U4" pin="13"/>
+      <node ref="U1" pin="1"/>
+      <node ref="TP6" pin="1"/>
     </net>
-    <net code="34" name="/FORCE+_1">
-      <node ref="J4" pin="1"/>
-      <node ref="U1" pin="8"/>
-      <node ref="J5" pin="1"/>
-      <node ref="J3" pin="1"/>
+    <net code="31" name="/MOSI">
+      <node ref="U4" pin="20"/>
+      <node ref="U1" pin="14"/>
+      <node ref="TP9" pin="1"/>
+      <node ref="U2" pin="14"/>
     </net>
-    <net code="35" name="/RTDIN+_1">
-      <node ref="J5" pin="2"/>
-      <node ref="C6" pin="1"/>
-      <node ref="U1" pin="10"/>
-      <node ref="J3" pin="2"/>
+    <net code="32" name="/MISO">
+      <node ref="TP7" pin="1"/>
+      <node ref="U4" pin="1"/>
+      <node ref="U2" pin="17"/>
+      <node ref="U1" pin="17"/>
     </net>
-    <net code="36" name="/RTDIN-_1">
-      <node ref="U1" pin="11"/>
-      <node ref="C6" pin="2"/>
-      <node ref="J5" pin="3"/>
-      <node ref="J3" pin="3"/>
+    <net code="33" name="/SCLK">
+      <node ref="U2" pin="15"/>
+      <node ref="TP5" pin="1"/>
+      <node ref="U1" pin="15"/>
+      <node ref="U4" pin="2"/>
     </net>
-    <net code="37" name="/FORCE-_1">
-      <node ref="U1" pin="12"/>
-      <node ref="J3" pin="4"/>
-      <node ref="J5" pin="4"/>
+    <net code="34" name="+3V3">
+      <node ref="J1" pin="B9"/>
+      <node ref="J1" pin="B10"/>
+      <node ref="U2" pin="2"/>
+      <node ref="C5" pin="1"/>
+      <node ref="U2" pin="3"/>
+      <node ref="C3" pin="1"/>
+      <node ref="C2" pin="1"/>
+      <node ref="R7" pin="2"/>
+      <node ref="R6" pin="2"/>
+      <node ref="TP1" pin="1"/>
+      <node ref="J1" pin="B11"/>
+      <node ref="R5" pin="2"/>
+      <node ref="R12" pin="2"/>
+      <node ref="R11" pin="2"/>
+      <node ref="R8" pin="2"/>
+      <node ref="U1" pin="2"/>
+      <node ref="U1" pin="3"/>
+      <node ref="U4" pin="4"/>
+      <node ref="R1" pin="2"/>
+      <node ref="R4" pin="2"/>
+      <node ref="C4" pin="1"/>
+      <node ref="C1" pin="1"/>
     </net>
-    <net code="38" name="/FORCE2_1">
-      <node ref="U1" pin="9"/>
-      <node ref="J4" pin="2"/>
-    </net>
-    <net code="39" name="/C2D_CON">
-      <node ref="R3" pin="2"/>
-      <node ref="J1" pin="B18"/>
-    </net>
-    <net code="40" name="/~MRESET~_CON">
+    <net code="35" name="/~MRESET~_CON">
       <node ref="J1" pin="A18"/>
       <node ref="R2" pin="1"/>
     </net>
-    <net code="41" name="/FORCE2_2">
-      <node ref="U2" pin="9"/>
+    <net code="36" name="HT">
+      <node ref="J1" pin="A6"/>
+      <node ref="J1" pin="A5"/>
+      <node ref="J1" pin="A4"/>
+      <node ref="J1" pin="A3"/>
+      <node ref="J1" pin="A2"/>
+      <node ref="J1" pin="A1"/>
+      <node ref="J1" pin="A7"/>
+      <node ref="J1" pin="A8"/>
+    </net>
+    <net code="37" name="/FORCE2_2">
       <node ref="J6" pin="2"/>
+      <node ref="U2" pin="9"/>
     </net>
-    <net code="42" name="/FORCE-_2">
-      <node ref="J2" pin="4"/>
-      <node ref="J7" pin="4"/>
+    <net code="38" name="/FORCE-_2">
       <node ref="U2" pin="12"/>
+      <node ref="J2" pin="1"/>
     </net>
-    <net code="43" name="/RTDIN-_2">
-      <node ref="U2" pin="11"/>
-      <node ref="J2" pin="3"/>
+    <net code="39" name="/RTDIN-_2">
       <node ref="C7" pin="2"/>
-      <node ref="J7" pin="3"/>
-    </net>
-    <net code="44" name="/RTDIN+_2">
-      <node ref="J7" pin="2"/>
-      <node ref="U2" pin="10"/>
-      <node ref="C7" pin="1"/>
+      <node ref="U2" pin="11"/>
       <node ref="J2" pin="2"/>
     </net>
-    <net code="45" name="/FORCE+_2">
-      <node ref="J7" pin="1"/>
-      <node ref="U2" pin="8"/>
+    <net code="40" name="/RTDIN+_2">
+      <node ref="C7" pin="1"/>
+      <node ref="U2" pin="10"/>
+      <node ref="J2" pin="3"/>
+    </net>
+    <net code="41" name="/FORCE+_2">
+      <node ref="J2" pin="4"/>
       <node ref="J6" pin="1"/>
-      <node ref="J2" pin="1"/>
+      <node ref="U2" pin="8"/>
+    </net>
+    <net code="42" name="/FORCE2_1">
+      <node ref="J4" pin="2"/>
+      <node ref="U1" pin="9"/>
+    </net>
+    <net code="43" name="/FORCE-_1">
+      <node ref="U1" pin="12"/>
+      <node ref="J3" pin="1"/>
+    </net>
+    <net code="44" name="/RTDIN-_1">
+      <node ref="U1" pin="11"/>
+      <node ref="J3" pin="2"/>
+      <node ref="C6" pin="2"/>
+    </net>
+    <net code="45" name="/C2D_CON">
+      <node ref="R3" pin="2"/>
+      <node ref="J1" pin="B18"/>
     </net>
   </nets>
 </export>
