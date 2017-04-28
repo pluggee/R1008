@@ -1,0 +1,28 @@
+### Module positions - created on Thu Apr 27 12:47:18 2017 ###
+### Printed by Pcbnew version kicad 4.0.6-e0-6349~53~ubuntu14.04.1
+## Unit = mm, Angle = deg.
+## Side : bottom
+# Ref     Val                Package                            PosX       PosY       Rot  Side
+C1        CC0603KRX7R9BB104  CAPC0603                       128.2000   -76.3000  180.0000  bottom
+C2        CC0603KRX7R9BB104  CAPC0603                       152.0000   -82.7000    0.0000  bottom
+C3        CC0603KRX7R9BB104  CAPC0603                       152.0000   -71.2000    0.0000  bottom
+C4        CC0603KRX7R9BB104  CAPC0603                       152.0000   -84.4000    0.0000  bottom
+C5        CC0603KRX7R9BB104  CAPC0603                       152.0000   -72.9000    0.0000  bottom
+C6        CC0603KRX7R9BB104  CAPC0603                       145.0000   -79.4000  180.0000  bottom
+C7        CC0603KRX7R9BB104  CAPC0603                       145.0000   -90.9000  180.0000  bottom
+R1        RC0603FR-0710KL    RESC0603                       127.7000   -92.4000  180.0000  bottom
+R2        RC0603FR-071KL     RESC0603                       132.2000   -92.4000  180.0000  bottom
+R3        RC0603FR-071KL     RESC0603                       132.2000   -90.7000    0.0000  bottom
+R4        RC0603FR-0710KL    RESC0603                       127.7000   -90.7000  180.0000  bottom
+R5        RC0603FR-0710KL    RESC0603                       127.7000   -80.5000  180.0000  bottom
+R6        RC0603FR-0710KL    RESC0603                       127.7000   -82.2000  180.0000  bottom
+R7        RC0603FR-0710KL    RESC0603                       127.7000   -83.9000  180.0000  bottom
+R8        RC0603FR-0710KL    RESC0603                       127.7000   -85.6000  180.0000  bottom
+R9        RN732BTTD4000B25   RESC1206                       148.2000   -76.0000  270.0000  bottom
+R10       RN732BTTD4000B25   RESC1206                       148.2000   -87.5000  270.0000  bottom
+R11       RC0603FR-0710KL    RESC0603                       127.7000   -89.0000  180.0000  bottom
+R12       RC0603FR-0710KL    RESC0603                       127.7000   -87.3000  180.0000  bottom
+U1        MAX31865AAP+       SOP65P720X530X186-20           141.5000   -74.4000  180.0000  bottom
+U2        MAX31865AAP+       SOP65P720X530X186-20           141.5000   -85.9000  180.0000  bottom
+U4        EFM8BB10F2G        QFN50P300X300X75-20NT170X170   132.7000   -76.5000    0.0000  bottom
+## End

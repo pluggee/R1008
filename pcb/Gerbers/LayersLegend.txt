@@ -1,0 +1,16 @@
+R1008-F.Cu.gbr        Front (Top) layer copper
+R1008-In1.Cu.gbr      Inner 1 layer copper
+R1008-In2.Cu.gbr      Inner 2 layer copper
+R1008-F.Adhes.gbr     Front (Top) layer adhesive
+R1008-B.Cu.gbr        Back (Bottom) layer copper
+R1008-F.Paste.gbr     Front (Top) Solder Paste
+R1008-B.Paste.gbr     Back (Bottom) Solder Paste
+R1008-B.SilkS.gbr     Back (Bottom) Silk Screen
+R1008-F.SilkS.gbr     Front (Top) Silk Screen
+R1008-F.Mask.gbr      Front (Top) Solder Mask
+R1008-B.Mask.gbr      Back (Bottom) Solder Mask
+R1008-Edge.Cuts.gbr   Edge Cut (routing cut)
+R1008-NPTH.drl        Non-Plated through hole drills
+R1008.drl             Plated through hole drills
+R1008-top.pos         Front (Top) component position file (SMT assembly)
+R1008-bot.pos         Back (Bottom) component position file (SMT assembly)
