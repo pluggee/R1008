@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>/home/sherif/git/R1008/pcb/R1008.sch</source>
-    <date>Thu 27 Apr 2017 12:30:37 PM PDT</date>
+    <date>Sun 30 Apr 2017 11:16:51 PM PDT</date>
     <tool>Eeschema 4.0.6-e0-6349~53~ubuntu14.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -70,8 +70,8 @@
       <value>SOCKET254P-01X04-1725672</value>
       <footprint>Main:70553-0038</footprint>
       <fields>
-        <field name="Manufacturer">Phoenix Contact</field>
-        <field name="MPN">1725672</field>
+        <field name="Manufacturer">Molex</field>
+        <field name="MPN">70553-0038</field>
         <field name="SKU">STUFF</field>
       </fields>
       <libsource lib="connect" part="SOCKET254P-01X04-1725672"/>
@@ -122,8 +122,8 @@
       <value>SOCKET254P-01X04-1725672</value>
       <footprint>Main:70553-0038</footprint>
       <fields>
-        <field name="Manufacturer">Phoenix Contact</field>
-        <field name="MPN">1725672</field>
+        <field name="Manufacturer">Molex</field>
+        <field name="MPN">70553-0038</field>
         <field name="SKU">STUFF</field>
       </fields>
       <libsource lib="connect" part="SOCKET254P-01X04-1725672"/>
@@ -738,17 +738,17 @@
     <library logical="microcontroller">
       <uri>/home/sherif/git/KiCADLibs/sch/microcontroller.lib</uri>
     </library>
+    <library logical="cap_smd">
+      <uri>/home/sherif/git/KiCADLibs/sch/cap_smd.lib</uri>
+    </library>
     <library logical="res_smd">
       <uri>/home/sherif/git/KiCADLibs/sch/res_smd.lib</uri>
-    </library>
-    <library logical="analog">
-      <uri>/home/sherif/git/KiCADLibs/sch/analog.lib</uri>
     </library>
     <library logical="electromechanical">
       <uri>/home/sherif/git/KiCADLibs/sch/electromechanical.lib</uri>
     </library>
-    <library logical="cap_smd">
-      <uri>/home/sherif/git/KiCADLibs/sch/cap_smd.lib</uri>
+    <library logical="analog">
+      <uri>/home/sherif/git/KiCADLibs/sch/analog.lib</uri>
     </library>
   </libraries>
   <nets>
