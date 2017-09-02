@@ -24,7 +24,8 @@ union temperature ch2res;
 char ch1config;
 char ch2config;
 
-char faultstat;
+char ch1fault;
+char ch2fault;
 
 unsigned char rtdmsb1;
 unsigned char rtdmsb2;
@@ -52,9 +53,10 @@ bit DATA_READY = 0;                    // Set to '1' by the SMBus ISR
 void Init (void)
 {
 	SetI2CSlaveAddress();               // Initialize I2C slave address
-	// Initialize RTD sensor
+	max31865_init();                    //// Initialize RTD sensors
 	P2MDOUT = 0x01;                     // set P2.0 (C2D) pin to output push pull for debugging
-	faultstat = 0x00;
+	ch1fault = 0x00;                    // initialize fault status register
+	ch2fault = 0x00;                    // initialize fault status register
 }
 
 //-----------------------------------------------------------------------------
@@ -71,15 +73,26 @@ int main (void)
 	while (1) 
 	{
 	    // every calculation takes around 50ms
+	    STAT = 1;                       // this is to measure the time it takes for floating point calc
+	    ch1fault = spi_readreg(1,MAX31865_FAULT);           // read ch1 fault register
+	    spi_writereg(1,
+	            MAX31865_CONFIG,
+	            spi_readreg(1,MAX31865_CONFIG)|0x02);       // clear MAX31865 fault register
 	    getRTDtemp(1);
 	    CalcRTDTemp(1);
+        STAT = 0;
 
+        ch2fault = spi_readreg(1,MAX31865_FAULT);           // read ch2 fault register
+        spi_writereg(2,
+                MAX31865_CONFIG,
+                spi_readreg(2,MAX31865_CONFIG)|0x02);       // clear MAX31865 fault register
 	    getRTDtemp(2);
 	    CalcRTDTemp(2);
 
-        STAT = 1;                       // this is to measure the time it takes for floating point calc
 	    calcInternalTemp();
-        STAT = 0;
+
+
+	    Delay_ms(20);                   // delay between reading data from registers
 
 	    // check for any reconfigurations? execute reconfig and reset reconfigflag
         //FIXME add code to reconfigure in case user wants to change notch filter to 50Hz on the fly

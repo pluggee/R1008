@@ -166,16 +166,16 @@ void spi_writereg(char channel, char address, char value){
 }
 
 void getRTDtemp (char channel){
-    spi_writereg(channel, MAX31865_CONFIG, CONFIG_VAL);     // make sure bias is turned on
-    Delay_ms(5);
-    spi_writereg(channel, MAX31865_CONFIG, CONFIG_VAL | 0x20);     // one shot conversion
+//    spi_writereg(channel, MAX31865_CONFIG, CONFIG_VAL);     // make sure bias is turned on
+//    Delay_ms(5);
+//    spi_writereg(channel, MAX31865_CONFIG, CONFIG_VAL | 0x20);     // one shot conversion
 
-    if (channel == 2){
-        while(DRDY2B);
-    }
-    else{
-        while(DRDY1B);                              // wait until done
-    }
+//    if (channel == 2){
+//        while(DRDY2B);
+//    }
+//    else{
+//        while(DRDY1B);                              // wait until done
+//    }
 
     // reads RTD resistor MSB and LSB registers from SPI
     if (channel == 2){                  // Step1.1: Activate Slave Select
@@ -269,3 +269,4 @@ void CalcRTDTemp(char channel){
         ch1temp.f = rtdtemp;
     }
 }
+

@@ -195,10 +195,13 @@ SI_INTERRUPT (SMBUS0_ISR, SMBUS0_IRQn)
             SMB_DATA_OUT[2] = ch2res.c[2];
             SMB_DATA_OUT[3] = ch2res.c[3];
             break;
-        case TGT_CMD_RTDFAULT:
+        case TGT_CMD_CH1FAULT:
             // read out fault status
-            SMB_DATA_OUT[0] = faultstat;
-            faultstat = 0x00;
+            SMB_DATA_OUT[0] = ch1fault;
+            break;
+        case TGT_CMD_CH2FAULT:
+            // read out fault status
+            SMB_DATA_OUT[0] = ch2fault;
             break;
         default:
             break;

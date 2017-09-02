@@ -41,7 +41,8 @@ extern unsigned char rtdlsb2;
 extern char ch1config;                  // value of config registers
 extern char ch2config;                  // value of config registers
 
-extern char faultstat;                  // stores fault status, B0 (CH1 fault), B1 (CH2 fault)
+extern char ch1fault;                   // stores channel 1 fault register value
+extern char ch2fault;                   // stores channel 1 fault register value
 
 extern char temp_internal;              // internal die temperature
 
@@ -68,6 +69,7 @@ extern char temp_internal;              // internal die temperature
 #define TGT_CMD_CH1CFG              0x36    // channel 1 config register
 #define TGT_CMD_CH2CFG              0x37    // channel 2 config register
 
-#define TGT_CMD_RTDFAULT            0x38    // reads out and resets fault status
+#define TGT_CMD_CH1FAULT            0x38    // reads CH1 fault register
+#define TGT_CMD_CH2FAULT            0x39    // reads CH12 fault register
 
 #endif /* GLOBAL_H_ */
