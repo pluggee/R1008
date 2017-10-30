@@ -1,5 +1,10 @@
 .DS_Store
+<<<<<<< HEAD
 *.rpt
 *.bak
 *-cache.lib
 *.kicad_pcb-bak
+=======
+firmware/*/Keil*
+.settings
+>>>>>>> 9e21fae53c23f2c2f59daeb17c9d70ec1b7c3595
